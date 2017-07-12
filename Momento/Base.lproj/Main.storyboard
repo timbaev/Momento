@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Drawing View Controller-->
         <scene sceneID="2z6-2A-5CM">
             <objects>
-                <viewController id="YnL-0K-gWq" sceneMemberID="viewController">
+                <viewController id="YnL-0K-gWq" customClass="DrawingViewController" customModule="Momento" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oEr-Cc-NS4"/>
                         <viewControllerLayoutGuide type="bottom" id="9sP-NA-D25"/>
@@ -103,12 +103,46 @@
                     <view key="view" contentMode="scaleToFill" id="hYX-Vh-InN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgJ-vB-AyS">
+                                <rect key="frame" x="148" y="72" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Очистить"/>
+                                <connections>
+                                    <action selector="clearTapped" destination="YnL-0K-gWq" eventType="touchUpInside" id="qeJ-9w-uQv"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nL6-s5-VDc" customClass="DrawView" customModule="Momento" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGQ-9g-98A">
+                                <rect key="frame" x="292" y="72" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Красный"/>
+                                <connections>
+                                    <action selector="colorTappedWithButton:" destination="YnL-0K-gWq" eventType="touchUpInside" id="wEE-K8-HFX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gg-Hc-UBv">
+                                <rect key="frame" x="16" y="72" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Черный"/>
+                                <connections>
+                                    <action selector="colorTappedWithButton:" destination="YnL-0K-gWq" eventType="touchUpInside" id="JbA-ZU-WbO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="drawView" destination="nL6-s5-VDc" id="dir-Fd-AaE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhW-pJ-Y5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="515"/>
+            <point key="canvasLocation" x="997.60000000000002" y="514.99250374812596"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UlE-OK-9F0">
