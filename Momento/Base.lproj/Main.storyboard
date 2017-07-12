@@ -39,9 +39,6 @@
                                 <rect key="frame" x="16" y="185" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Сделать фото"/>
-                                <connections>
-                                    <segue destination="afV-fr-3V7" kind="modal" id="NB2-KX-bgx"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGh-LC-z4f">
                                 <rect key="frame" x="16" y="255" width="343" height="30"/>
@@ -74,9 +71,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="HhL-NF-2pZ" kind="relationship" relationship="rootViewController" id="jVh-e3-tjo"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x1p-zy-qzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
