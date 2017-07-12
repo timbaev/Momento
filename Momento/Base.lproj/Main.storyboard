@@ -44,9 +44,6 @@
                                 <rect key="frame" x="16" y="255" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Коллекция фото"/>
-                                <connections>
-                                    <segue destination="LcG-IR-i6s" kind="modal" id="oQz-aM-QYu"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35G-2U-n4L">
                                 <rect key="frame" x="16" y="324" width="343" height="30"/>
