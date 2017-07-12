@@ -61,7 +61,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="623" y="-194"/>
         </scene>
         <!--View Controller-->
@@ -73,50 +72,14 @@
                         <viewControllerLayoutGuide type="bottom" id="ecF-7U-cpS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HIy-wB-8Sz">
-=======
-            <point key="canvasLocation" x="-164" y="124"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="MAd-RM-MOY">
-            <objects>
-                <navigationController id="afV-fr-3V7" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4DN-6S-A4E">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x1p-zy-qzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="746" y="124"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="TiV-JU-zoo">
-            <objects>
-                <viewController id="HhL-NF-2pZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ewy-h3-7u5"/>
-                        <viewControllerLayoutGuide type="bottom" id="ukf-Mb-o5c"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DTJ-vx-Tr4">
->>>>>>> Azat
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-<<<<<<< HEAD
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4V6-i8-ptc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2260" y="-195"/>
-=======
-                    <navigationItem key="navigationItem" id="b0e-0Q-Of2">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="MjQ-BT-7y2"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fBo-Kp-Vjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1716" y="124"/>
->>>>>>> Azat
         </scene>
     </scenes>
 </document>
