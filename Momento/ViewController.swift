@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onTakePhotoClick(_ sender: Any) {
+        
+    }
 
+    @IBAction func onScanClick(_ sender: Any) {
+    }
 }
 
