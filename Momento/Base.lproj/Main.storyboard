@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="C7f-4v-Jv1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="C7f-4v-Jv1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aa1-mR-fYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-750" y="124"/>
+            <point key="canvasLocation" x="-524" y="-195"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -57,6 +57,7 @@
                                 <state key="normal" title="Сделать фото"/>
                                 <connections>
                                     <action selector="onTakePhotoClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnt-Gi-xUy"/>
+                                    <segue destination="LcG-IR-i6s" kind="show" id="Nki-XW-Zy7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGh-LC-z4f">
@@ -92,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="623" y="-194"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Take Photo-->
         <scene sceneID="IDk-IG-bmI">
             <objects>
-                <viewController id="LcG-IR-i6s" sceneMemberID="viewController">
+                <viewController id="LcG-IR-i6s" customClass="ViewControllerTakePhoto" customModule="Momento" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wHK-jz-K29"/>
                         <viewControllerLayoutGuide type="bottom" id="ecF-7U-cpS"/>
@@ -103,12 +104,45 @@
                     <view key="view" contentMode="scaleToFill" id="HIy-wB-8Sz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuV-BX-rnN">
+                                <rect key="frame" x="131" y="543" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save your photo"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="LcG-IR-i6s" eventType="touchUpInside" id="a8m-ZA-MRf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5m-63-VaD">
+                                <rect key="frame" x="140" y="581" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Camera"/>
+                                <connections>
+                                    <action selector="openCameraPressed:" destination="LcG-IR-i6s" eventType="touchUpInside" id="ZCC-bF-YzP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCq-Bk-9oa">
+                                <rect key="frame" x="67" y="136" width="242" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAi-xs-1pS">
+                                <rect key="frame" x="140" y="505" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Library"/>
+                                <connections>
+                                    <action selector="openLibraryPressed:" destination="LcG-IR-i6s" eventType="touchUpInside" id="nWn-SX-LVC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imagePicked" destination="SCq-Bk-9oa" id="g02-FK-kzK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4V6-i8-ptc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2260" y="-195"/>
+            <point key="canvasLocation" x="2264.8000000000002" y="-466.41679160419795"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2z6-2A-5CM">
@@ -144,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HrS-Wl-Zt8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="-173"/>
+            <point key="canvasLocation" x="2266" y="291"/>
         </scene>
     </scenes>
 </document>
