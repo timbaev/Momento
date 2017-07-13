@@ -8,13 +8,17 @@
 
 import UIKit
 
-class DrawingViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+class DrawingViewController: UIViewController {
     
     @IBOutlet var drawView: AnyObject!
+    @IBOutlet weak var photoImageView: UIImageView!
     let colorPicker = HSBColorPicker()
+    var barButtonColor: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        barButtonColor = UIBarButtonItem(title: "Кисть", style: .plain, target: self, action: #selector(onColorPickerClick(_:)))
+        navigationItem.rightBarButtonItem = barButtonColor
 
         // Do any additional setup after loading the view.
     }
@@ -30,31 +34,26 @@ class DrawingViewController: UIViewController, UIPopoverPresentationControllerDe
         theDrawView.setNeedsDisplay()
     }
     
-    @IBAction func colorTapped(button: UIButton!) {
+    @IBAction func onCancelLineClick(_ sender: Any) {
         let theDrawView = drawView as! DrawView
-        var color: UIColor!
-        if (button.titleLabel?.text == "Красный") {
-            color = UIColor.red
-        } else if (button.titleLabel?.text == "Черный") {
-            color = UIColor.black
-        }
-        theDrawView.drawColor = color
-    }
-
-    @IBAction func onColorPickerClick(_ sender: Any) {
-        let popController = UIStoryboard(name: "main", bundle: nil).instantiateViewController(withIdentifier: "popover")
-        
-        popController.modalPresentationStyle = UIModalPresentationStyle.popover
-        
-        popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down
-        popController.popoverPresentationController?.delegate = self
-        popController.popoverPresentationController?.sourceView = sender as? UIView
-        popController.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
-        
-        self.present(popController, animated: true, completion: nil)
+        theDrawView.lines.remove(at: theDrawView.lines.count - 1)
+        theDrawView.setNeedsDisplay()
     }
     
-    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
-        return UIModalPresentationStyle.none
+    @IBAction func onPickPhotoClick(_ sender: Any) {
+        showPopUp(with: "photoPopUp")
+    }
+    
+
+    @IBAction func onColorPickerClick(_ sender: Any) {
+        showPopUp(with: "colorPopover")
+    }
+    
+    private func showPopUp(with name: String) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
     }
 }
