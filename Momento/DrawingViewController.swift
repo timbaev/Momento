@@ -56,4 +56,14 @@ class DrawingViewController: UIViewController {
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParentViewController: self)
     }
+    
+    @IBAction func onSaveImageClick(_ sender: Any) {
+        let drawView = self.drawView as! UIView
+        UIGraphicsBeginImageContext(drawView.frame.size)
+        drawView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+    }
+    
 }
