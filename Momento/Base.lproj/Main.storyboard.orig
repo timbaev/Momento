@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aa1-mR-fYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-750" y="124"/>
+            <point key="canvasLocation" x="-226" y="-195"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="623" y="-194"/>
         </scene>
         <!--Drawing View Controller-->
         <scene sceneID="2z6-2A-5CM">
@@ -142,6 +142,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhW-pJ-Y5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="1345" y="510"/>
+=======
             <point key="canvasLocation" x="997.60000000000002" y="514.99250374812596"/>
         </scene>
         <!--View Controller-->
@@ -161,6 +164,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOd-bZ-Jsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="998" y="-860"/>
+>>>>>>> Timur
         </scene>
         <!--View Controller-->
         <scene sceneID="UlE-OK-9F0">
@@ -178,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HrS-Wl-Zt8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="-173"/>
+            <point key="canvasLocation" x="1345" y="-378"/>
         </scene>
     </scenes>
 </document>
