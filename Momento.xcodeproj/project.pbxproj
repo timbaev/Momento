@@ -10,6 +10,7 @@
 		CB5501151F164C0F0029F486 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501141F164C0F0029F486 /* DrawView.swift */; };
 		CB5501171F164CFD0029F486 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501161F164CFD0029F486 /* DrawingViewController.swift */; };
 		CB5501191F16502A0029F486 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501181F16502A0029F486 /* Line.swift */; };
+		CB76557C1F173C460054FE48 /* HSBColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB76557B1F173C460054FE48 /* HSBColorPicker.swift */; };
 		CB895CE41F154AF700E7A1E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */; };
 		CB895CE61F154AF700E7A1E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE51F154AF700E7A1E1 /* ViewController.swift */; };
 		CB895CE91F154AF700E7A1E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB895CE71F154AF700E7A1E1 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		CB5501141F164C0F0029F486 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		CB5501161F164CFD0029F486 /* DrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		CB5501181F16502A0029F486 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		CB76557B1F173C460054FE48 /* HSBColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBColorPicker.swift; sourceTree = "<group>"; };
 		CB895CE01F154AF700E7A1E1 /* Momento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB895CE51F154AF700E7A1E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				CB5501141F164C0F0029F486 /* DrawView.swift */,
 				CB5501161F164CFD0029F486 /* DrawingViewController.swift */,
 				CB5501181F16502A0029F486 /* Line.swift */,
+				CB76557B1F173C460054FE48 /* HSBColorPicker.swift */,
 			);
 			path = Momento;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB895CE61F154AF700E7A1E1 /* ViewController.swift in Sources */,
+				CB76557C1F173C460054FE48 /* HSBColorPicker.swift in Sources */,
 				CB5501171F164CFD0029F486 /* DrawingViewController.swift in Sources */,
 				CB895CE41F154AF700E7A1E1 /* AppDelegate.swift in Sources */,
 				CB5501151F164C0F0029F486 /* DrawView.swift in Sources */,

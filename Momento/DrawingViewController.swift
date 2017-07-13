@@ -8,9 +8,10 @@
 
 import UIKit
 
-class DrawingViewController: UIViewController {
+class DrawingViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet var drawView: AnyObject!
+    let colorPicker = HSBColorPicker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,4 +41,20 @@ class DrawingViewController: UIViewController {
         theDrawView.drawColor = color
     }
 
+    @IBAction func onColorPickerClick(_ sender: Any) {
+        let popController = UIStoryboard(name: "main", bundle: nil).instantiateViewController(withIdentifier: "popover")
+        
+        popController.modalPresentationStyle = UIModalPresentationStyle.popover
+        
+        popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down
+        popController.popoverPresentationController?.delegate = self
+        popController.popoverPresentationController?.sourceView = sender as? UIView
+        popController.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
+        
+        self.present(popController, animated: true, completion: nil)
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
 }
