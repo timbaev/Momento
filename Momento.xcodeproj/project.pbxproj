@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		235B42D81F1763AC00423CB4 /* ViewControllerTakePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B42D71F1763AC00423CB4 /* ViewControllerTakePhoto.swift */; };
+		235B42DD1F176D7900423CB4 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B42D91F176D7900423CB4 /* DrawingViewController.swift */; };
+		235B42DE1F176D7900423CB4 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B42DA1F176D7900423CB4 /* DrawView.swift */; };
+		235B42DF1F176D7900423CB4 /* HSBColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B42DB1F176D7900423CB4 /* HSBColorPicker.swift */; };
+		235B42E01F176D7900423CB4 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B42DC1F176D7900423CB4 /* Line.swift */; };
 		CB895CE41F154AF700E7A1E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */; };
 		CB895CE61F154AF700E7A1E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE51F154AF700E7A1E1 /* ViewController.swift */; };
 		CB895CE91F154AF700E7A1E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB895CE71F154AF700E7A1E1 /* Main.storyboard */; };
@@ -17,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		235B42D71F1763AC00423CB4 /* ViewControllerTakePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTakePhoto.swift; sourceTree = "<group>"; };
+		235B42D91F176D7900423CB4 /* DrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		235B42DA1F176D7900423CB4 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		235B42DB1F176D7900423CB4 /* HSBColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBColorPicker.swift; sourceTree = "<group>"; };
+		235B42DC1F176D7900423CB4 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		CB895CE01F154AF700E7A1E1 /* Momento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB895CE51F154AF700E7A1E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +64,10 @@
 		CB895CE21F154AF700E7A1E1 /* Momento */ = {
 			isa = PBXGroup;
 			children = (
+				235B42D91F176D7900423CB4 /* DrawingViewController.swift */,
+				235B42DA1F176D7900423CB4 /* DrawView.swift */,
+				235B42DB1F176D7900423CB4 /* HSBColorPicker.swift */,
+				235B42DC1F176D7900423CB4 /* Line.swift */,
 				CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */,
 				CB895CE51F154AF700E7A1E1 /* ViewController.swift */,
 				CB895CE71F154AF700E7A1E1 /* Main.storyboard */,
@@ -141,7 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB895CE61F154AF700E7A1E1 /* ViewController.swift in Sources */,
+				235B42DF1F176D7900423CB4 /* HSBColorPicker.swift in Sources */,
+				235B42DE1F176D7900423CB4 /* DrawView.swift in Sources */,
+				235B42DD1F176D7900423CB4 /* DrawingViewController.swift in Sources */,
 				CB895CE41F154AF700E7A1E1 /* AppDelegate.swift in Sources */,
+				235B42E01F176D7900423CB4 /* Line.swift in Sources */,
 				235B42D81F1763AC00423CB4 /* ViewControllerTakePhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
