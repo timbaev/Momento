@@ -25,7 +25,15 @@ UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        guard let image = info["UIImagePickerControllerOriginalImage"] as? UIImage else { return }
+        guard let image = info["UIImagePickerControllerOriginalImage"] as? UIImage else {
+            
+            let alert = UIAlertController(title: "Hey", message: "You Don't made a photo!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.default,handler: nil))
+           
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
         
         imagePicked.image = image
         
@@ -59,13 +67,21 @@ UINavigationControllerDelegate {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
+        guard imagePicked.image != nil else {
+            let alert = UIAlertController(title: "Hey", message: "You Don't made a photo!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.default,handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
         let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
         let compressedJPGImage = UIImage(data: imageData!)
         UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
-        
         let alert = UIAlertController(title: "Wow", message: "You have saved your photo", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.default,handler: nil))
         self.present(alert, animated: true, completion: nil)
+        
     }
     }
 
