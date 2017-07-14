@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="C7f-4v-Jv1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="C7f-4v-Jv1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aa1-mR-fYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-750" y="124"/>
+            <point key="canvasLocation" x="-524" y="-195"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -51,14 +51,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jV0-yp-uTA">
-                                <rect key="frame" x="16" y="229" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Сделать фото"/>
-                                <connections>
-                                    <segue destination="ShQ-fy-m4A" kind="show" id="s5V-6D-n6r"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGh-LC-z4f">
                                 <rect key="frame" x="16" y="299" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -83,6 +75,15 @@
                                     <action selector="onScanClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z1v-ca-oG1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jV0-yp-uTA">
+                                <rect key="frame" x="16" y="233" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Сделать фото"/>
+                                <connections>
+                                    <action selector="onTakePhotoClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnt-Gi-xUy"/>
+                                    <segue destination="LcG-IR-i6s" kind="show" id="Nki-XW-Zy7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -90,8 +91,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="622" y="-196"/>
         </scene>
+        <!--View Controller Take Photo-->
+        <scene sceneID="IDk-IG-bmI">
         <!--Folder Collection View Controller-->
         <scene sceneID="YK6-ta-5Gp">
             <objects>
@@ -240,7 +243,63 @@
         <!--Drawing View Controller-->
         <scene sceneID="2z6-2A-5CM">
             <objects>
-                <viewController id="YnL-0K-gWq" customClass="DrawingViewController" customModule="Momento" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LcG-IR-i6s" customClass="ViewControllerTakePhoto" customModule="Momento" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wHK-jz-K29"/>
+                        <viewControllerLayoutGuide type="bottom" id="ecF-7U-cpS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HIy-wB-8Sz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuV-BX-rnN">
+                                <rect key="frame" x="131" y="543" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save your photo"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="LcG-IR-i6s" eventType="touchUpInside" id="a8m-ZA-MRf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5m-63-VaD">
+                                <rect key="frame" x="140" y="581" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Camera"/>
+                                <connections>
+                                    <action selector="openCameraPressed:" destination="LcG-IR-i6s" eventType="touchUpInside" id="ZCC-bF-YzP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="UUN-TB-5Ef">
+                                <rect key="frame" x="66" y="138" width="242" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCq-Bk-9oa">
+                                <rect key="frame" x="67" y="136" width="242" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAi-xs-1pS">
+                                <rect key="frame" x="140" y="505" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Library"/>
+                                <connections>
+                                    <action selector="openLibraryPressed:" destination="LcG-IR-i6s" eventType="touchUpInside" id="nWn-SX-LVC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagePicked" destination="SCq-Bk-9oa" id="g02-FK-kzK"/>
+                        <outlet property="placeHolderImageView" destination="UUN-TB-5Ef" id="EwO-t4-IWq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4V6-i8-ptc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2265" y="-733"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2z6-2A-5CM">
+            <objects>
+                <viewController id="YnL-0K-gWq" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oEr-Cc-NS4"/>
                         <viewControllerLayoutGuide type="bottom" id="9sP-NA-D25"/>
@@ -248,64 +307,33 @@
                     <view key="view" contentMode="scaleToFill" id="hYX-Vh-InN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgJ-vB-AyS">
-                                <rect key="frame" x="148" y="72" width="78" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Очистить"/>
-                                <connections>
-                                    <action selector="clearTapped" destination="YnL-0K-gWq" eventType="touchUpInside" id="qeJ-9w-uQv"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nL6-s5-VDc" customClass="DrawView" customModule="Momento" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGQ-9g-98A">
-                                <rect key="frame" x="292" y="72" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Красный"/>
-                                <connections>
-                                    <action selector="colorTappedWithButton:" destination="YnL-0K-gWq" eventType="touchUpInside" id="wEE-K8-HFX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gg-Hc-UBv">
-                                <rect key="frame" x="16" y="72" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Цвет"/>
-                                <connections>
-                                    <action selector="onColorPickerClick:" destination="YnL-0K-gWq" eventType="touchUpInside" id="hxn-wY-XZy"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="drawView" destination="nL6-s5-VDc" id="dir-Fd-AaE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhW-pJ-Y5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1473" y="641"/>
+            <point key="canvasLocation" x="622" y="654"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="5TY-rC-hRG">
+        <scene sceneID="UlE-OK-9F0">
             <objects>
-                <viewController id="ShQ-fy-m4A" sceneMemberID="viewController">
+                <viewController id="1bt-nK-LXX" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yJv-If-9gP"/>
-                        <viewControllerLayoutGuide type="bottom" id="28j-dg-G4e"/>
+                        <viewControllerLayoutGuide type="top" id="a69-5Q-xXv"/>
+                        <viewControllerLayoutGuide type="bottom" id="o9T-rR-1Ii"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="r7g-Dl-9bt">
+                    <view key="view" contentMode="scaleToFill" id="Vdb-wh-lgv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eOd-bZ-Jsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrS-Wl-Zt8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="956"/>
+            <point key="canvasLocation" x="2265" y="341"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="151" height="150"/>
+    </resources>
 </document>
