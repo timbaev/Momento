@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -237,8 +237,6 @@
             </objects>
             <point key="canvasLocation" x="3236" y="-196"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="IDk-IG-bmI">
         <!--Drawing View Controller-->
         <scene sceneID="2z6-2A-5CM">
             <objects>
@@ -307,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOd-bZ-Jsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622" y="641"/>
+            <point key="canvasLocation" x="705" y="956"/>
         </scene>
     </scenes>
 </document>
