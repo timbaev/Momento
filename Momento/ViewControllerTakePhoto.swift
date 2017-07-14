@@ -11,6 +11,7 @@ import UIKit
 class ViewControllerTakePhoto: UIViewController,UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
     @IBOutlet weak var imagePicked: UIImageView!
+    @IBOutlet weak var placeHolderImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,7 @@ UINavigationControllerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+    //MARK: - image picker controller
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
@@ -36,6 +36,7 @@ UINavigationControllerDelegate {
         }
         
         imagePicked.image = image
+        placeHolderImageView.isHidden = true
         
         picker.dismiss(animated: true, completion: nil)
     }
@@ -65,9 +66,9 @@ UINavigationControllerDelegate {
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
-    
+    //MARK: - save button
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-        guard imagePicked.image != nil else {
+        guard imagePicked.image != nil  else {
             let alert = UIAlertController(title: "Hey", message: "You Don't made a photo!", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.default,handler: nil))
             
