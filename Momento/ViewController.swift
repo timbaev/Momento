@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onScanClick(_ sender: Any) {
+        
     }
 }
 

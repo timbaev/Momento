@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -343,5 +344,151 @@
             </objects>
             <point key="canvasLocation" x="994" y="-173"/>
         </scene>
+        <!--Camera Scanner View Controller-->
+        <scene sceneID="z2q-NA-rbb">
+            <objects>
+                <viewController id="dWv-iH-3iq" customClass="CameraScannerViewController" customModule="Momento" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qd6-Qd-i4o"/>
+                        <viewControllerLayoutGuide type="bottom" id="GQt-1p-Eb1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YtU-Vs-Ox7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mn9-vZ-TUf" customClass="IPDFCameraViewController">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <subviews>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="focusIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-eS-ODc">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="Ffp-gj-ER3"/>
+                                            <constraint firstAttribute="width" constant="75" id="S6O-LT-CYf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zQ-hE-Vup" userLabel="Adjust Bar">
+                                        <rect key="frame" x="0.0" y="551" width="375" height="46"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6S-gt-igp">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="b26-fz-8sD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                <state key="normal" title="FLASH OFF">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tourchToggle:" destination="dWv-iH-3iq" eventType="touchUpInside" id="Qph-38-Lpl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbh-Ac-BsU">
+                                                <rect key="frame" x="147" y="0.0" width="80" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="LMi-qK-kqA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                <state key="normal" title="FILTER W/B">
+                                                    <color key="titleColor" red="0.96862047910690308" green="0.7623932957649231" blue="0.15925142168998718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="filterToggle:" destination="dWv-iH-3iq" eventType="touchUpInside" id="2Wf-3c-osV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDa-ax-yB4">
+                                                <rect key="frame" x="295" y="-8" width="80" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="nZZ-XY-mHi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                <state key="normal" title="CROP ON">
+                                                    <color key="titleColor" red="0.96861976385116577" green="0.76237273216247559" blue="0.15506932139396667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="borderDetectToggle:" destination="dWv-iH-3iq" eventType="touchUpInside" id="hzg-jS-Lw6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="eDa-ax-yB4" firstAttribute="top" secondItem="4zQ-hE-Vup" secondAttribute="top" constant="-8" id="23t-Vw-35G"/>
+                                            <constraint firstAttribute="trailing" secondItem="eDa-ax-yB4" secondAttribute="trailing" id="5mq-4v-Nbm"/>
+                                            <constraint firstItem="eDa-ax-yB4" firstAttribute="bottom" secondItem="4zQ-hE-Vup" secondAttribute="bottomMargin" id="DYV-E2-8Bp"/>
+                                            <constraint firstItem="dbh-Ac-BsU" firstAttribute="centerX" secondItem="4zQ-hE-Vup" secondAttribute="centerX" id="Df6-Mj-W3n"/>
+                                            <constraint firstItem="M6S-gt-igp" firstAttribute="top" secondItem="4zQ-hE-Vup" secondAttribute="top" id="ka2-PM-0VH"/>
+                                            <constraint firstItem="M6S-gt-igp" firstAttribute="baseline" secondItem="dbh-Ac-BsU" secondAttribute="baseline" id="qWy-Fb-GNi"/>
+                                            <constraint firstItem="M6S-gt-igp" firstAttribute="leading" secondItem="4zQ-hE-Vup" secondAttribute="leading" id="umN-mx-U5X"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUQ-ZM-8fd">
+                                        <rect key="frame" x="154" y="477" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="ggm-vO-PzD"/>
+                                            <constraint firstAttribute="height" constant="66" id="voa-51-vnA"/>
+                                        </constraints>
+                                        <state key="normal" image="capture_button">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="captureButton:" destination="dWv-iH-3iq" eventType="touchUpInside" id="wqr-mn-IFp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4zQ-hE-Vup" secondAttribute="bottom" id="2LE-70-RQ8"/>
+                                    <constraint firstAttribute="trailing" secondItem="4zQ-hE-Vup" secondAttribute="trailing" id="HuP-DX-6kv"/>
+                                    <constraint firstAttribute="centerX" secondItem="eUQ-ZM-8fd" secondAttribute="centerX" id="K6N-EJ-Mbf"/>
+                                    <constraint firstAttribute="bottom" secondItem="eUQ-ZM-8fd" secondAttribute="bottom" constant="54" id="O5n-4B-mqI"/>
+                                    <constraint firstItem="KIe-eS-ODc" firstAttribute="top" secondItem="Mn9-vZ-TUf" secondAttribute="top" id="RHQ-Qc-e8W"/>
+                                    <constraint firstItem="4zQ-hE-Vup" firstAttribute="leading" secondItem="Mn9-vZ-TUf" secondAttribute="leading" id="hFi-FE-4Cd"/>
+                                    <constraint firstItem="4zQ-hE-Vup" firstAttribute="top" secondItem="eUQ-ZM-8fd" secondAttribute="bottom" constant="8" symbolic="YES" id="kRD-6U-IhA"/>
+                                    <constraint firstItem="KIe-eS-ODc" firstAttribute="leading" secondItem="4zQ-hE-Vup" secondAttribute="leading" id="ug6-k1-cy3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkm-MD-Yxt">
+                                <rect key="frame" x="326" y="20" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="onCloseClick:" destination="dWv-iH-3iq" eventType="touchUpInside" id="t4I-14-Wjr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Mn9-vZ-TUf" firstAttribute="top" secondItem="qd6-Qd-i4o" secondAttribute="bottom" constant="50" id="66z-xB-Kxg"/>
+                            <constraint firstItem="Mn9-vZ-TUf" firstAttribute="leading" secondItem="YtU-Vs-Ox7" secondAttribute="leading" id="Eg5-jg-Mod"/>
+                            <constraint firstItem="Mn9-vZ-TUf" firstAttribute="bottom" secondItem="GQt-1p-Eb1" secondAttribute="top" id="bc8-9D-dxF"/>
+                            <constraint firstAttribute="trailing" secondItem="Mn9-vZ-TUf" secondAttribute="trailing" id="e7j-WP-jKA"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="efZ-2f-GS9" appends="YES" id="Kry-8y-T2O"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="cameraViewController" destination="Mn9-vZ-TUf" id="RQB-Co-MtE"/>
+                        <outlet property="focusIndicator" destination="KIe-eS-ODc" id="qGg-Vf-Jde"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iay-P0-0Hh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="efZ-2f-GS9">
+                    <connections>
+                        <action selector="focusGesture:" destination="dWv-iH-3iq" id="9xY-9b-nfp"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="857.72113943028489"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="capture_button" width="66" height="66"/>
+        <image name="close" width="126" height="126"/>
+        <image name="focusIndicator" width="75" height="75"/>
+    </resources>
 </document>
