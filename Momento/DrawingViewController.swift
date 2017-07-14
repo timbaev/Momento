@@ -36,8 +36,10 @@ class DrawingViewController: UIViewController {
     
     @IBAction func onCancelLineClick(_ sender: Any) {
         let theDrawView = drawView as! DrawView
-        theDrawView.lines.remove(at: theDrawView.lines.count - 1)
-        theDrawView.setNeedsDisplay()
+        if (theDrawView.lines.count > 0) {
+            theDrawView.lines.remove(at: theDrawView.lines.count - 1)
+            theDrawView.setNeedsDisplay()
+        }
     }
     
     @IBAction func onPickPhotoClick(_ sender: Any) {
