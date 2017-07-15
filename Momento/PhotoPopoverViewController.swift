@@ -26,6 +26,8 @@ class PhotoPopoverViewController: UIViewController, UIImagePickerControllerDeleg
         
         mainView.layer.cornerRadius = 10
         
+        let drawingVC = parent as! DrawingViewController
+        transperentSlider.value = Float(drawingVC.photoImageView.alpha)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
