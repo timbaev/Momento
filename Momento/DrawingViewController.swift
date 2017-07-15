@@ -12,15 +12,27 @@ class DrawingViewController: UIViewController {
     
     @IBOutlet var drawView: AnyObject!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var traillingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var menuView: UIView!
+    
     let colorPicker = HSBColorPicker()
     var barButtonColor: UIBarButtonItem!
+    var menuShowing = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        barButtonColor = UIBarButtonItem(title: "Кисть", style: .plain, target: self, action: #selector(onColorPickerClick(_:)))
-        navigationItem.rightBarButtonItem = barButtonColor
-
-        // Do any additional setup after loading the view.
+        barButtonColor = UIBarButtonItem(image: #imageLiteral(resourceName: "palette"), style: .plain, target: self, action: #selector(self.onColorPickerClick(_:)))
+        let barButtonDesigner = UIBarButtonItem(image: #imageLiteral(resourceName: "designer"), style: .plain, target: self, action: #selector(self.openMenu))
+        navigationItem.rightBarButtonItem = barButtonDesigner
+        navigationItem.rightBarButtonItems?.append(barButtonColor)
+        
+        menuView.layer.shadowOpacity = 1
+        menuView.layer.shadowRadius = 6
+        
+        //Initialize sliders in side menu
+        let drawView = self.drawView as! DrawView
+        opacitySlider.value = Float(drawView.opacity)
+        lineWidthSlider.value = Float(drawView.lineWidth)
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,6 +78,35 @@ class DrawingViewController: UIViewController {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+    }
+    
+    @objc private func openMenu() {
+        if (menuShowing) {
+            traillingConstraint.constant = -290
+        } else {
+            traillingConstraint.constant = 0
+        }
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        })
+        
+        menuShowing = !menuShowing
+    }
+    
+    //MARK: -
+    //MARK: side menu
+    
+    @IBOutlet weak var opacitySlider: UISlider!
+    @IBOutlet weak var lineWidthSlider: UISlider!
+    
+    @IBAction func opacityLineChanged(_ sender: UISlider) {
+        let drawView = self.drawView as! DrawView
+        drawView.opacity = CGFloat(sender.value)
+    }
+    
+    @IBAction func lineWidthChanged(_ sender: UISlider) {
+        let drawVeiw = self.drawView as! DrawView
+        drawVeiw.lineWidth = Int(sender.value)
     }
     
 }
