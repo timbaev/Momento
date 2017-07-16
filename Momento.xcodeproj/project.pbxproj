@@ -11,6 +11,8 @@
 		CB121DB81F1AE3CE00640512 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB121DB71F1AE3CE00640512 /* Circle.swift */; };
 		CB1536441F18BA8200A527B4 /* IPDFCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1536431F18BA8200A527B4 /* IPDFCameraViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CB1536461F18C2DB00A527B4 /* CameraScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1536451F18C2DB00A527B4 /* CameraScannerViewController.swift */; };
+		CB1984CD1F1B68B2009F0E5F /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1984CC1F1B68B2009F0E5F /* Triangle.swift */; };
+		CB1984CF1F1B6FD0009F0E5F /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1984CE1F1B6FD0009F0E5F /* Figure.swift */; };
 		CB5501151F164C0F0029F486 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501141F164C0F0029F486 /* DrawView.swift */; };
 		CB5501171F164CFD0029F486 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501161F164CFD0029F486 /* DrawingViewController.swift */; };
 		CB5501191F16502A0029F486 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501181F16502A0029F486 /* Line.swift */; };
@@ -32,6 +34,8 @@
 		CB1536421F18BA8200A527B4 /* IPDFCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDFCameraViewController.h; sourceTree = "<group>"; };
 		CB1536431F18BA8200A527B4 /* IPDFCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDFCameraViewController.m; sourceTree = "<group>"; };
 		CB1536451F18C2DB00A527B4 /* CameraScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraScannerViewController.swift; sourceTree = "<group>"; };
+		CB1984CC1F1B68B2009F0E5F /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		CB1984CE1F1B6FD0009F0E5F /* Figure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
 		CB5501141F164C0F0029F486 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		CB5501161F164CFD0029F486 /* DrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		CB5501181F16502A0029F486 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				CBF605C61F17D690001F8035 /* AnimationPopUp.swift */,
 				CB121DB51F1ADA9400640512 /* Rectangle.swift */,
 				CB121DB71F1AE3CE00640512 /* Circle.swift */,
+				CB1984CC1F1B68B2009F0E5F /* Triangle.swift */,
+				CB1984CE1F1B6FD0009F0E5F /* Figure.swift */,
 			);
 			path = Momento;
 			sourceTree = "<group>";
@@ -188,8 +194,10 @@
 				CB121DB61F1ADA9400640512 /* Rectangle.swift in Sources */,
 				CB895CE61F154AF700E7A1E1 /* ViewController.swift in Sources */,
 				CB76557C1F173C460054FE48 /* HSBColorPicker.swift in Sources */,
+				CB1984CD1F1B68B2009F0E5F /* Triangle.swift in Sources */,
 				CB5501171F164CFD0029F486 /* DrawingViewController.swift in Sources */,
 				CBF605C71F17D690001F8035 /* AnimationPopUp.swift in Sources */,
+				CB1984CF1F1B6FD0009F0E5F /* Figure.swift in Sources */,
 				CB76557E1F176C540054FE48 /* ColorPopoverViewController.swift in Sources */,
 				CB895CE41F154AF700E7A1E1 /* AppDelegate.swift in Sources */,
 				CB121DB81F1AE3CE00640512 /* Circle.swift in Sources */,

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class Line {
+class Line: Figure {
     var start: CGPoint
     var end: CGPoint
     var color: UIColor
-    var width: CGFloat
-    var alpha: CGFloat
+    var lineWidth: CGFloat
+    var opacity: CGFloat
     
     var startX: CGFloat {
         get {
@@ -39,11 +39,21 @@ class Line {
         }
     }
     
-    init(start _start: CGPoint, end _end: CGPoint, color _color: UIColor, width _width: Int, alpha _alpha: CGFloat) {
+    init(start _start: CGPoint, end _end: CGPoint, color _color: UIColor, lineWidth _width: Int, opacity _alpha: CGFloat) {
         start = _start
         end = _end
         color = _color
-        width = CGFloat(_width)
-        alpha = _alpha
+        lineWidth = CGFloat(_width)
+        opacity = _alpha
+    }
+    
+    func draw(with context: CGContext) {
+        context.beginPath()
+        context.setLineWidth(lineWidth)
+        context.move(to: CGPoint(x: startX, y: startY))
+        context.addLine(to: CGPoint(x: endX, y: endY))
+        context.setStrokeColor(color.cgColor)
+        context.setAlpha(opacity)
+        context.strokePath()
     }
 }

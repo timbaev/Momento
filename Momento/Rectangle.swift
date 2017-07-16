@@ -8,20 +8,34 @@
 
 import Foundation
 
-class Rectangle {
+class Rectangle: Figure {
     var center: CGPoint
     var width: CGFloat
     var height: CGFloat
-    var lineWidth: Int
-    var strokeColor: UIColor
+    var lineWidth: CGFloat
+    var color: UIColor
+    var opacity: CGFloat
     var fillColor: UIColor
     
-    init(center: CGPoint, width: CGFloat, height: CGFloat, lineWidth: Int, strokeColor: UIColor, fillColor: UIColor) {
+    init(center: CGPoint, width: CGFloat, height: CGFloat, lineWidth: CGFloat, color: UIColor, fillColor: UIColor, opacity: CGFloat) {
         self.center = center
         self.width = width
         self.height = height
         self.lineWidth = lineWidth
-        self.strokeColor = strokeColor
+        self.color = color
         self.fillColor = fillColor
+        self.opacity = opacity
+    }
+    
+    func draw(with context: CGContext) {
+        context.beginPath()
+        context.addRect(CGRect(x: center.x, y: center.y, width: width, height: height))
+        context.setLineWidth(lineWidth)
+        context.setStrokeColor(color.cgColor)
+        context.strokePath()
+        
+        context.setFillColor(fillColor.cgColor)
+        context.fillPath()
+        context.strokePath()
     }
 }

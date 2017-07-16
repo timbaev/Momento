@@ -225,6 +225,14 @@
                                             <action selector="onFigureClick:" destination="YnL-0K-gWq" eventType="touchUpInside" id="R3A-lO-5Z4"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knn-Sn-z4Y">
+                                        <rect key="frame" x="8" y="225" width="91" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Треугольгик"/>
+                                        <connections>
+                                            <action selector="onFigureClick:" destination="YnL-0K-gWq" eventType="touchUpInside" id="5hx-vC-K8z"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>

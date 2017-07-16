@@ -37,16 +37,14 @@ class DrawingViewController: UIViewController {
     
     @IBAction func clearTapped() {
         let theDrawView = drawView as! DrawView
-        theDrawView.lines = []
-        theDrawView.rectangles = []
-        theDrawView.circles = []
+        theDrawView.figures = []
         theDrawView.setNeedsDisplay()
     }
     
     @IBAction func onCancelLineClick(_ sender: Any) {
         let theDrawView = drawView as! DrawView
-        if (theDrawView.lines.count > 0) {
-            theDrawView.lines.remove(at: theDrawView.lines.count - 1)
+        if (theDrawView.figures.count > 0) {
+            theDrawView.figures.remove(at: theDrawView.figures.count - 1)
             theDrawView.setNeedsDisplay()
         }
     }

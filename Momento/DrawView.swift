@@ -10,16 +10,14 @@ import UIKit
 
 class DrawView: UIView {
     
-    var lines: [Line] = []
-    var rectangles: [Rectangle] = []
-    var circles: [Circle] = []
+    var figures: [Figure] = []
     var lastPoint: CGPoint!
     var drawColor: UIColor = UIColor.black
+    var fillColor: UIColor = UIColor.clear
     var lineWidth: Int = 5
     var opacity: CGFloat = 1
     var shape: Int = 0
-    var tempRectangle: Rectangle!
-    var tempCircle: Circle!
+    var tempFigure: Figure!
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -33,25 +31,35 @@ class DrawView: UIView {
         let newPoint = (touches.first?.location(in: self))!
         
         if (shape == 0) {
-            lines.append(Line(start: lastPoint, end: newPoint, color: drawColor, width: lineWidth, alpha: opacity))
+            figures.append(Line(start: lastPoint, end: newPoint, color: drawColor, lineWidth: lineWidth, opacity: opacity))
         }
         
         if (shape == 1) {
-            if (tempRectangle == nil) {
-                tempRectangle = Rectangle(center: lastPoint, width: 2 * (newPoint.x - lastPoint.x), height: 2 * (newPoint.y - lastPoint.y), lineWidth: lineWidth, strokeColor: UIColor.black, fillColor: UIColor.blue)
+            if (tempFigure == nil) {
+                tempFigure = Rectangle(center: lastPoint, width: 2 * (newPoint.x - lastPoint.x), height: 2 * (newPoint.y - lastPoint.y), lineWidth: CGFloat(lineWidth), color: drawColor, fillColor: fillColor, opacity: opacity)
             } else {
+                let tempRectangle = tempFigure as! Rectangle
                 tempRectangle.width = 2 * (newPoint.x - tempRectangle.center.x)
                 tempRectangle.height = 2 * (newPoint.y - tempRectangle.center.y)
-                tempRectangle.strokeColor = drawColor
             }
         }
         
         if (shape == 2) {
-            if (tempCircle == nil) {
-                tempCircle = Circle(center: lastPoint, lineWidth: lineWidth, radius: circleRadius(for: lastPoint, newPoint), color: drawColor)
+            if (tempFigure == nil) {
+                tempFigure = Circle(center: lastPoint, lineWidth: CGFloat(lineWidth), radius: circleRadius(for: lastPoint, newPoint), color: drawColor, fillColor: fillColor, opacity: opacity)
             } else {
+                let tempCircle = tempFigure as! Circle
                 tempCircle.radius = circleRadius(for: tempCircle.center, newPoint)
-                tempCircle.color = drawColor
+            }
+        }
+        
+        if (shape == 3) {
+            if (tempFigure == nil) {
+                tempFigure = Triangle(A: lastPoint, B: newPoint, C: thirdTrianglePoint(for: lastPoint, newPoint), color: drawColor, fillColor: fillColor, lineWidth: CGFloat(lineWidth), opacity: opacity)
+            } else {
+                let tempTriangle = tempFigure as! Triangle
+                tempTriangle.B = newPoint
+                tempTriangle.C = thirdTrianglePoint(for: tempTriangle.A, newPoint)
             }
         }
         
@@ -61,73 +69,28 @@ class DrawView: UIView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (shape == 1 && tempRectangle != nil) {
-            rectangles.append(tempRectangle)
-            tempRectangle = nil
-        }
-        if (shape == 2 && tempCircle != nil) {
-            circles.append(tempCircle)
-            tempCircle = nil
-        }
-    }
-    
-    private func draw(circles: [Circle]) {
-        guard let context = UIGraphicsGetCurrentContext() else { return }
-        context.setLineCap(.round)
-        for circle in circles {
-            context.beginPath()
-            context.setLineWidth(CGFloat(circle.lineWidth))
-            context.setStrokeColor(circle.color.cgColor)
-            context.addArc(center: circle.center, radius: circle.radius, startAngle: 0, endAngle: circle.endAngle, clockwise: true)
-            context.strokePath()
-        }
-    }
-    
-    private func draw(rectangles: [Rectangle]) {
-        guard let context = UIGraphicsGetCurrentContext() else { return }
-        context.setLineCap(.round)
-        for rectangle in rectangles {
-            context.beginPath()
-            context.addRect(CGRect(x: rectangle.center.x, y: rectangle.center.y, width: rectangle.width, height: rectangle.height))
-            context.setLineWidth(CGFloat(rectangle.lineWidth))
-            context.setStrokeColor(rectangle.strokeColor.cgColor)
-            context.strokePath()
-        
-            context.setFillColor(rectangle.fillColor.cgColor)
-            context.fillPath()
-            context.strokePath()
-        }
-    }
-    
-    private func draw(lines: [Line]) {
-        let context = UIGraphicsGetCurrentContext()
-        context?.setLineCap(.round)
-        for line in lines {
-            context?.beginPath()
-            context?.setLineWidth(line.width)
-            context?.move(to: CGPoint(x: line.startX, y: line.startY))
-            context?.addLine(to: CGPoint(x: line.endX, y: line.endY))
-            context?.setStrokeColor(line.color.cgColor)
-            context?.setAlpha(line.alpha)
-            context?.strokePath()
+        if (shape != 0 && tempFigure != nil) {
+            figures.append(tempFigure)
+            tempFigure = nil
         }
     }
     
     override func draw(_ rect: CGRect) {
-        if (tempRectangle != nil) {
-            draw(rectangles: [tempRectangle])
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        if (tempFigure != nil) {
+            tempFigure.draw(with: context)
         }
-        if (tempCircle != nil) {
-            draw(circles: [tempCircle])
+        for figure in figures {
+            figure.draw(with: context)
         }
-        draw(rectangles: rectangles)
-        draw(lines: lines)
-        draw(circles: circles)
     }
 }
 
 extension DrawView {
     func circleRadius(for point1: CGPoint,_ point2: CGPoint) -> CGFloat {
         return sqrt((point2.x - point1.x) * (point2.x - point1.x) + (point2.y - point1.y) * (point2.y - point1.y))
+    }
+    func thirdTrianglePoint(for point1: CGPoint, _ point2: CGPoint) -> CGPoint {
+        return CGPoint(x: 2 * (point2.x - (point2.x - point1.x)), y: point2.y)
     }
 }
