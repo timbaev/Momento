@@ -28,11 +28,6 @@ class DrawingViewController: UIViewController {
         
         menuView.layer.shadowOpacity = 1
         menuView.layer.shadowRadius = 6
-        
-        //Initialize sliders in side menu
-        let drawView = self.drawView as! DrawView
-        opacitySlider.value = Float(drawView.opacity)
-        lineWidthSlider.value = Float(drawView.lineWidth)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +38,8 @@ class DrawingViewController: UIViewController {
     @IBAction func clearTapped() {
         let theDrawView = drawView as! DrawView
         theDrawView.lines = []
+        theDrawView.rectangles = []
+        theDrawView.circles = []
         theDrawView.setNeedsDisplay()
     }
     
@@ -98,15 +95,25 @@ class DrawingViewController: UIViewController {
     
     @IBOutlet weak var opacitySlider: UISlider!
     @IBOutlet weak var lineWidthSlider: UISlider!
+    @IBOutlet weak var opacityMonitorLabel: UILabel!
+    @IBOutlet weak var widthMonitorLabel: UILabel!
     
     @IBAction func opacityLineChanged(_ sender: UISlider) {
         let drawView = self.drawView as! DrawView
         drawView.opacity = CGFloat(sender.value)
+        opacityMonitorLabel.text = String(sender.value)
     }
     
     @IBAction func lineWidthChanged(_ sender: UISlider) {
         let drawVeiw = self.drawView as! DrawView
         drawVeiw.lineWidth = Int(sender.value)
+        widthMonitorLabel.text = String(Int(sender.value))
     }
+    
+    @IBAction func onFigureClick(_ sender: UIButton) {
+        let castDrawView = self.drawView as! DrawView
+        castDrawView.shape = sender.tag
+    }
+    
     
 }

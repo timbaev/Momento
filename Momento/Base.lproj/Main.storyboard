@@ -187,6 +187,44 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSj-7s-VO1">
+                                        <rect key="frame" x="230" y="8" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYz-yc-HPN">
+                                        <rect key="frame" x="230" y="79" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANT-w5-BcQ">
+                                        <rect key="frame" x="77" y="187" width="121" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Прямоугольник"/>
+                                        <connections>
+                                            <action selector="onFigureClick:" destination="YnL-0K-gWq" eventType="touchUpInside" id="evg-KZ-nHZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOS-dq-qiB">
+                                        <rect key="frame" x="8" y="187" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Линия"/>
+                                        <connections>
+                                            <action selector="onFigureClick:" destination="YnL-0K-gWq" eventType="touchUpInside" id="fee-ZH-LKK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Du-oa-bjR">
+                                        <rect key="frame" x="226" y="187" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Круг"/>
+                                        <connections>
+                                            <action selector="onFigureClick:" destination="YnL-0K-gWq" eventType="touchUpInside" id="R3A-lO-5Z4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -224,9 +262,11 @@
                         <outlet property="drawView" destination="nL6-s5-VDc" id="dir-Fd-AaE"/>
                         <outlet property="lineWidthSlider" destination="rzY-RG-j3J" id="hgx-rp-asG"/>
                         <outlet property="menuView" destination="kA1-TW-W4y" id="xFH-sN-GIy"/>
+                        <outlet property="opacityMonitorLabel" destination="fSj-7s-VO1" id="gnL-Jy-6fP"/>
                         <outlet property="opacitySlider" destination="Ebe-ui-gaA" id="4wI-Bd-baP"/>
                         <outlet property="photoImageView" destination="WIq-MA-WLW" id="Ytt-vV-uZJ"/>
                         <outlet property="traillingConstraint" destination="3NC-zf-4Kv" id="vMK-0p-V68"/>
+                        <outlet property="widthMonitorLabel" destination="UYz-yc-HPN" id="gZz-M5-dDy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhW-pJ-Y5q" userLabel="First Responder" sceneMemberID="firstResponder"/>

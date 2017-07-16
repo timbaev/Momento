@@ -25,6 +25,8 @@ class ColorPopoverViewController: UIViewController, HSBColorPickerDelegate {
         mainView.layer.cornerRadius = 10
         
         colorPicker.delegate = self
+        
+        colorMonitor.backgroundColor = getDrawView().drawColor
     }
     
     @IBAction func closePopUp(_ sender: Any) {
