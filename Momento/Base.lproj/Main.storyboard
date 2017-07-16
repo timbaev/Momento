@@ -225,8 +225,16 @@
                                             <action selector="onFigureClick:" destination="YnL-0K-gWq" eventType="touchUpInside" id="R3A-lO-5Z4"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUS-DM-Y03">
+                                        <rect key="frame" x="167" y="143" width="105" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Цвет заливки"/>
+                                        <connections>
+                                            <action selector="onFillColorPickerClick:" destination="YnL-0K-gWq" eventType="touchUpInside" id="qWb-Mm-KDt"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knn-Sn-z4Y">
-                                        <rect key="frame" x="8" y="225" width="91" height="30"/>
+                                        <rect key="frame" x="92" y="225" width="91" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Треугольгик"/>
                                         <connections>
@@ -268,6 +276,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="drawView" destination="nL6-s5-VDc" id="dir-Fd-AaE"/>
+                        <outlet property="lineButton" destination="ZOS-dq-qiB" id="usa-nP-QFn"/>
                         <outlet property="lineWidthSlider" destination="rzY-RG-j3J" id="hgx-rp-asG"/>
                         <outlet property="menuView" destination="kA1-TW-W4y" id="xFH-sN-GIy"/>
                         <outlet property="opacityMonitorLabel" destination="fSj-7s-VO1" id="gnL-Jy-6fP"/>

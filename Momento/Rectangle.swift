@@ -29,13 +29,14 @@ class Rectangle: Figure {
     
     func draw(with context: CGContext) {
         context.beginPath()
-        context.addRect(CGRect(x: center.x, y: center.y, width: width, height: height))
         context.setLineWidth(lineWidth)
         context.setStrokeColor(color.cgColor)
+        context.setAlpha(opacity)
+        let rectangle = CGRect(x: center.x, y: center.y, width: width, height: height)
+        context.addRect(rectangle)
         context.strokePath()
         
         context.setFillColor(fillColor.cgColor)
-        context.fillPath()
-        context.strokePath()
+        context.fill(rectangle)
     }
 }

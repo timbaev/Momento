@@ -25,16 +25,19 @@ class Triangle: Figure {
         self.opacity = opacity
     }
     
-    func draw(with context: CGContext) {
-        context.beginPath()
-        context.setLineWidth(lineWidth)
-        context.setStrokeColor(color.cgColor)
-        context.move(to: A)
-        context.addLine(to: B)
-        context.addLine(to: C)
-        context.closePath()
+    func draw(with context: CGContext) {    
+        let line = UIBezierPath()
         
-        context.setFillColor(fillColor.cgColor)
-        context.fillPath()
+        line.lineWidth = lineWidth
+        line.move(to: A)
+        line.addLine(to: B)
+        line.addLine(to: C)
+        line.addLine(to: A)
+        line.close()
+        color.setStroke()
+        fillColor.setFill()
+        
+        line.stroke()
+        line.fill()
     }
 }

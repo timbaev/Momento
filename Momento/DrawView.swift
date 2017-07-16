@@ -77,6 +77,7 @@ class DrawView: UIView {
     
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
+        context.setLineCap(.round)
         if (tempFigure != nil) {
             tempFigure.draw(with: context)
         }
@@ -91,6 +92,6 @@ extension DrawView {
         return sqrt((point2.x - point1.x) * (point2.x - point1.x) + (point2.y - point1.y) * (point2.y - point1.y))
     }
     func thirdTrianglePoint(for point1: CGPoint, _ point2: CGPoint) -> CGPoint {
-        return CGPoint(x: 2 * (point2.x - (point2.x - point1.x)), y: point2.y)
+        return CGPoint(x: (point2.x - 2 * (point2.x - point1.x)), y: point2.y)
     }
 }

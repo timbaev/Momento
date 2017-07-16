@@ -15,9 +15,10 @@ class DrawingViewController: UIViewController {
     @IBOutlet weak var traillingConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuView: UIView!
     
-    let colorPicker = HSBColorPicker()
     var barButtonColor: UIBarButtonItem!
     var menuShowing = false
+    var isLineColorChange: Bool!
+    var pickedButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,13 @@ class DrawingViewController: UIViewController {
         
         menuView.layer.shadowOpacity = 1
         menuView.layer.shadowRadius = 6
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.hideSideMenuTap(_:)))
+        drawView.addGestureRecognizer(gesture)
+        
+        lineButton.layer.cornerRadius = 10
+        lineButton.backgroundColor = UIColor.white
+        pickedButton = lineButton
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,12 +62,21 @@ class DrawingViewController: UIViewController {
     }
     
 
-    @IBAction func onColorPickerClick(_ sender: Any) {
+    @IBAction func onColorPickerClick(_ sender: UIButton) {
+        isLineColorChange = true
+        showPopUp(with: "colorPopover")
+    }
+    
+    @IBAction func onFillColorPickerClick(_ sender: UIButton) {
+        isLineColorChange = false
         showPopUp(with: "colorPopover")
     }
     
     private func showPopUp(with name: String) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
+        if name == "colorPopover" {
+            (popOverVC as! ColorPopoverViewController).isLineColorChange = isLineColorChange
+        }
         self.addChildViewController(popOverVC)
         popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
@@ -75,19 +92,6 @@ class DrawingViewController: UIViewController {
         UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
     }
     
-    @objc private func openMenu() {
-        if (menuShowing) {
-            traillingConstraint.constant = -290
-        } else {
-            traillingConstraint.constant = 0
-        }
-        UIView.animate(withDuration: 0.3, animations: {
-            self.view.layoutIfNeeded()
-        })
-        
-        menuShowing = !menuShowing
-    }
-    
     //MARK: -
     //MARK: side menu
     
@@ -95,6 +99,7 @@ class DrawingViewController: UIViewController {
     @IBOutlet weak var lineWidthSlider: UISlider!
     @IBOutlet weak var opacityMonitorLabel: UILabel!
     @IBOutlet weak var widthMonitorLabel: UILabel!
+    @IBOutlet weak var lineButton: UIButton!
     
     @IBAction func opacityLineChanged(_ sender: UISlider) {
         let drawView = self.drawView as! DrawView
@@ -111,6 +116,36 @@ class DrawingViewController: UIViewController {
     @IBAction func onFigureClick(_ sender: UIButton) {
         let castDrawView = self.drawView as! DrawView
         castDrawView.shape = sender.tag
+        if (pickedButton != nil) {
+            pickedButton.backgroundColor = UIColor.clear
+        }
+        pickedButton = sender
+        sender.layer.cornerRadius = 10
+        sender.backgroundColor = UIColor.white
+    }
+    
+    @objc private func openMenu() {
+        if (menuShowing) {
+            traillingConstraint.constant = -290
+        } else {
+            traillingConstraint.constant = 0
+        }
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        })
+        
+        menuShowing = !menuShowing
+    }
+    
+    func hideSideMenuTap(_ sender: UITapGestureRecognizer) {
+        if (menuShowing) {
+            traillingConstraint.constant = -290
+        }
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        })
+        
+        menuShowing = !menuShowing
     }
     
     

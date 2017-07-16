@@ -14,6 +14,8 @@ class ColorPopoverViewController: UIViewController, HSBColorPickerDelegate {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var colorMonitor: UIView!
     @IBOutlet weak var mainView: UIView!
+    
+    var isLineColorChange = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,13 @@ class ColorPopoverViewController: UIViewController, HSBColorPickerDelegate {
         
         colorPicker.delegate = self
         
-        colorMonitor.backgroundColor = getDrawView().drawColor
+        colorMonitor.layer.borderWidth = 1
+        colorMonitor.layer.borderColor = UIColor.black.cgColor
+        if (isLineColorChange) {
+            colorMonitor.backgroundColor = getDrawView().drawColor
+        } else {
+            colorMonitor.backgroundColor = getDrawView().fillColor
+        }
     }
     
     @IBAction func closePopUp(_ sender: Any) {
@@ -37,7 +45,11 @@ class ColorPopoverViewController: UIViewController, HSBColorPickerDelegate {
         colorMonitor.backgroundColor = color
         let drawingVC = self.parent as! DrawingViewController
         let drawView = drawingVC.drawView as! DrawView
-        drawView.drawColor = color
+        if (isLineColorChange) {
+            drawView.drawColor = color
+        } else {
+            drawView.fillColor = color
+        }
     }
     
     func getDrawView() -> DrawView {

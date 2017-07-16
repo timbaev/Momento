@@ -30,10 +30,12 @@ class Circle: Figure {
         context.beginPath()
         context.setLineWidth(CGFloat(lineWidth))
         context.setStrokeColor(color.cgColor)
-        context.addArc(center: center, radius: radius, startAngle: 0, endAngle: endAngle, clockwise: true)
+        context.setAlpha(opacity)
+        let rectangle = CGRect(x: center.x, y: center.y, width: 2 * radius, height: 2 * radius)
+        context.addEllipse(in: rectangle)
+        context.strokePath()
         
         context.setFillColor(fillColor.cgColor)
-        context.fillPath()
-        context.strokePath()
+        context.fillEllipse(in: rectangle)
     }
 }
