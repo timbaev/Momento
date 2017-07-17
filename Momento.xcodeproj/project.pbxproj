@@ -14,6 +14,9 @@
 		C31B190C1F18E33E004BA3E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */; };
 		C363C3981F17AFDF00671077 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363C3961F17AFDF00671077 /* CollectionViewCell.swift */; };
 		C363C3991F17AFDF00671077 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363C3971F17AFDF00671077 /* CollectionViewController.swift */; };
+		C375D6411F1CBF8000C62B01 /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375D6401F1CBF8000C62B01 /* DatabaseModel.swift */; };
+		C375D6431F1CE7A600C62B01 /* FolderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375D6421F1CE7A600C62B01 /* FolderData.swift */; };
+		C375D6451F1CE7D800C62B01 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375D6441F1CE7D800C62B01 /* CellData.swift */; };
 		CB5501151F164C0F0029F486 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501141F164C0F0029F486 /* DrawView.swift */; };
 		CB5501171F164CFD0029F486 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501161F164CFD0029F486 /* DrawingViewController.swift */; };
 		CB5501191F16502A0029F486 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501181F16502A0029F486 /* Line.swift */; };
@@ -31,6 +34,9 @@
 		C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FolderCollectionViewCell.swift; path = ../FolderCollectionViewCell.swift; sourceTree = "<group>"; };
 		C363C3961F17AFDF00671077 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C363C3971F17AFDF00671077 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		C375D6401F1CBF8000C62B01 /* DatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
+		C375D6421F1CE7A600C62B01 /* FolderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FolderData.swift; path = ../FolderData.swift; sourceTree = "<group>"; };
+		C375D6441F1CE7D800C62B01 /* CellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
 		CB5501141F164C0F0029F486 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		CB5501161F164CFD0029F486 /* DrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		CB5501181F16502A0029F486 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 		CB895CE21F154AF700E7A1E1 /* Momento */ = {
 			isa = PBXGroup;
 			children = (
+				C375D6421F1CE7A600C62B01 /* FolderData.swift */,
 				231EC12A1F18F62200FA9526 /* ViewControllerTakePhoto.swift */,
 				C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */,
 				C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */,
@@ -90,6 +97,8 @@
 				CB5501161F164CFD0029F486 /* DrawingViewController.swift */,
 				CB5501181F16502A0029F486 /* Line.swift */,
 				CB76557B1F173C460054FE48 /* HSBColorPicker.swift */,
+				C375D6401F1CBF8000C62B01 /* DatabaseModel.swift */,
+				C375D6441F1CE7D800C62B01 /* CellData.swift */,
 			);
 			path = Momento;
 			sourceTree = "<group>";
@@ -168,11 +177,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C31B190C1F18E33E004BA3E6 /* AppDelegate.swift in Sources */,
+				C375D6411F1CBF8000C62B01 /* DatabaseModel.swift in Sources */,
 				C31B19091F18B317004BA3E6 /* FolderCollectionViewController.swift in Sources */,
 				231EC12B1F18F62200FA9526 /* ViewControllerTakePhoto.swift in Sources */,
 				C363C3991F17AFDF00671077 /* CollectionViewController.swift in Sources */,
 				CB895CE61F154AF700E7A1E1 /* ViewController.swift in Sources */,
 				C31B190B1F18B642004BA3E6 /* FolderCollectionViewCell.swift in Sources */,
+				C375D6431F1CE7A600C62B01 /* FolderData.swift in Sources */,
+				C375D6451F1CE7D800C62B01 /* CellData.swift in Sources */,
 				C315369F1F17FAF80008B854 /* DetailViewController.swift in Sources */,
 				C363C3981F17AFDF00671077 /* CollectionViewCell.swift in Sources */,
 				CB76557C1F173C460054FE48 /* HSBColorPicker.swift in Sources */,
