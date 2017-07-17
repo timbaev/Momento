@@ -73,6 +73,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
         self.present(alertController, animated: true, completion: nil)
     }
     @IBAction func onScanClick(_ sender: Any) {
+        
     }
 }
 

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB121DB61F1ADA9400640512 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB121DB51F1ADA9400640512 /* Rectangle.swift */; };
+		CB121DB81F1AE3CE00640512 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB121DB71F1AE3CE00640512 /* Circle.swift */; };
+		CB1536441F18BA8200A527B4 /* IPDFCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1536431F18BA8200A527B4 /* IPDFCameraViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CB1536461F18C2DB00A527B4 /* CameraScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1536451F18C2DB00A527B4 /* CameraScannerViewController.swift */; };
+		CB1984CD1F1B68B2009F0E5F /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1984CC1F1B68B2009F0E5F /* Triangle.swift */; };
+		CB1984CF1F1B6FD0009F0E5F /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1984CE1F1B6FD0009F0E5F /* Figure.swift */; };
 		238CE93B1F1CD3DF00A0B696 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */; };
 		C315369F1F17FAF80008B854 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315369E1F17FAF80008B854 /* DetailViewController.swift */; };
 		C31B19091F18B317004BA3E6 /* FolderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */; };
@@ -21,13 +27,25 @@
 		CB5501171F164CFD0029F486 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501161F164CFD0029F486 /* DrawingViewController.swift */; };
 		CB5501191F16502A0029F486 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501181F16502A0029F486 /* Line.swift */; };
 		CB76557C1F173C460054FE48 /* HSBColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB76557B1F173C460054FE48 /* HSBColorPicker.swift */; };
+		CB76557E1F176C540054FE48 /* ColorPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB76557D1F176C540054FE48 /* ColorPopoverViewController.swift */; };
+		CB895CE41F154AF700E7A1E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */; };
 		CB895CE61F154AF700E7A1E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE51F154AF700E7A1E1 /* ViewController.swift */; };
 		CB895CE91F154AF700E7A1E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB895CE71F154AF700E7A1E1 /* Main.storyboard */; };
 		CB895CEB1F154AF700E7A1E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB895CEA1F154AF700E7A1E1 /* Assets.xcassets */; };
 		CB895CEE1F154AF700E7A1E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB895CEC1F154AF700E7A1E1 /* LaunchScreen.storyboard */; };
+		CBF605C51F17CE49001F8035 /* PhotoPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF605C41F17CE49001F8035 /* PhotoPopoverViewController.swift */; };
+		CBF605C71F17D690001F8035 /* AnimationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF605C61F17D690001F8035 /* AnimationPopUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB121DB51F1ADA9400640512 /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		CB121DB71F1AE3CE00640512 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		CB1536411F18BA8200A527B4 /* Momento-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Momento-Bridging-Header.h"; sourceTree = "<group>"; };
+		CB1536421F18BA8200A527B4 /* IPDFCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDFCameraViewController.h; sourceTree = "<group>"; };
+		CB1536431F18BA8200A527B4 /* IPDFCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDFCameraViewController.m; sourceTree = "<group>"; };
+		CB1536451F18C2DB00A527B4 /* CameraScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraScannerViewController.swift; sourceTree = "<group>"; };
+		CB1984CC1F1B68B2009F0E5F /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		CB1984CE1F1B6FD0009F0E5F /* Figure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
 		238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		C315369E1F17FAF80008B854 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FolderCollectionViewController.swift; path = ../FolderCollectionViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +59,7 @@
 		CB5501161F164CFD0029F486 /* DrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		CB5501181F16502A0029F486 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		CB76557B1F173C460054FE48 /* HSBColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBColorPicker.swift; sourceTree = "<group>"; };
+		CB76557D1F176C540054FE48 /* ColorPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPopoverViewController.swift; sourceTree = "<group>"; };
 		CB895CE01F154AF700E7A1E1 /* Momento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB895CE51F154AF700E7A1E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +67,8 @@
 		CB895CEA1F154AF700E7A1E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB895CED1F154AF700E7A1E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB895CEF1F154AF700E7A1E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBF605C41F17CE49001F8035 /* PhotoPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPopoverViewController.swift; sourceTree = "<group>"; };
+		CBF605C61F17D690001F8035 /* AnimationPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationPopUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +82,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB1536401F18BA5600A527B4 /* CameraScanner */ = {
+			isa = PBXGroup;
+			children = (
+				CB1536421F18BA8200A527B4 /* IPDFCameraViewController.h */,
+				CB1536431F18BA8200A527B4 /* IPDFCameraViewController.m */,
+				CB1536411F18BA8200A527B4 /* Momento-Bridging-Header.h */,
+			);
+			name = CameraScanner;
+			sourceTree = "<group>";
+		};
 		CB895CD71F154AF700E7A1E1 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +111,9 @@
 		CB895CE21F154AF700E7A1E1 /* Momento */ = {
 			isa = PBXGroup;
 			children = (
+				CB1536401F18BA5600A527B4 /* CameraScanner */,
+				CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */,
+				CB895CE51F154AF700E7A1E1 /* ViewController.swift */,
 				C375D6421F1CE7A600C62B01 /* FolderData.swift */,
 				CB895CE71F154AF700E7A1E1 /* Main.storyboard */,
 				CB5501141F164C0F0029F486 /* DrawView.swift */,
@@ -99,8 +133,16 @@
 				CB895CEF1F154AF700E7A1E1 /* Info.plist */,
 				CB5501141F164C0F0029F486 /* DrawView.swift */,
 				CB5501161F164CFD0029F486 /* DrawingViewController.swift */,
+				CB1536451F18C2DB00A527B4 /* CameraScannerViewController.swift */,
 				CB5501181F16502A0029F486 /* Line.swift */,
 				CB76557B1F173C460054FE48 /* HSBColorPicker.swift */,
+				CB76557D1F176C540054FE48 /* ColorPopoverViewController.swift */,
+				CBF605C41F17CE49001F8035 /* PhotoPopoverViewController.swift */,
+				CBF605C61F17D690001F8035 /* AnimationPopUp.swift */,
+				CB121DB51F1ADA9400640512 /* Rectangle.swift */,
+				CB121DB71F1AE3CE00640512 /* Circle.swift */,
+				CB1984CC1F1B68B2009F0E5F /* Triangle.swift */,
+				CB1984CE1F1B6FD0009F0E5F /* Figure.swift */,
 				C375D6401F1CBF8000C62B01 /* DatabaseModel.swift */,
 				C375D6441F1CE7D800C62B01 /* CellData.swift */,
 			);
@@ -139,6 +181,7 @@
 				TargetAttributes = {
 					CB895CDF1F154AF700E7A1E1 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						DevelopmentTeam = U76UU38W98;
 						ProvisioningStyle = Automatic;
 					};
@@ -180,6 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1536441F18BA8200A527B4 /* IPDFCameraViewController.m in Sources */,
+				CB1536461F18C2DB00A527B4 /* CameraScannerViewController.swift in Sources */,
+				CB121DB61F1ADA9400640512 /* Rectangle.swift in Sources */,
 				C31B190C1F18E33E004BA3E6 /* AppDelegate.swift in Sources */,
 				C375D6411F1CBF8000C62B01 /* DatabaseModel.swift in Sources */,
 				C31B19091F18B317004BA3E6 /* FolderCollectionViewController.swift in Sources */,
@@ -193,8 +239,15 @@
 				C315369F1F17FAF80008B854 /* DetailViewController.swift in Sources */,
 				C363C3981F17AFDF00671077 /* CollectionViewCell.swift in Sources */,
 				CB76557C1F173C460054FE48 /* HSBColorPicker.swift in Sources */,
+				CB1984CD1F1B68B2009F0E5F /* Triangle.swift in Sources */,
 				CB5501171F164CFD0029F486 /* DrawingViewController.swift in Sources */,
+				CBF605C71F17D690001F8035 /* AnimationPopUp.swift in Sources */,
+				CB1984CF1F1B6FD0009F0E5F /* Figure.swift in Sources */,
+				CB76557E1F176C540054FE48 /* ColorPopoverViewController.swift in Sources */,
+				CB895CE41F154AF700E7A1E1 /* AppDelegate.swift in Sources */,
+				CB121DB81F1AE3CE00640512 /* Circle.swift in Sources */,
 				CB5501151F164C0F0029F486 /* DrawView.swift in Sources */,
+				CBF605C51F17CE49001F8035 /* PhotoPopoverViewController.swift in Sources */,
 				CB5501191F16502A0029F486 /* Line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,11 +369,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				DEVELOPMENT_TEAM = U76UU38W98;
 				INFOPLIST_FILE = Momento/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = itis.Momento;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Momento/Momento-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -329,11 +389,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				DEVELOPMENT_TEAM = U76UU38W98;
 				INFOPLIST_FILE = Momento/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = itis.Momento;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Momento/Momento-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
