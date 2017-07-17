@@ -29,6 +29,11 @@ class CameraScannerViewController: UIViewController {
         cameraViewController.start()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -83,9 +88,8 @@ class CameraScannerViewController: UIViewController {
     }
     
     @IBAction func onCloseClick(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        _ = self.navigationController?.popViewController(animated: true)
     }
-    
     
     //MARK: -
     //MARK: CameraVC Capture Image
@@ -93,6 +97,7 @@ class CameraScannerViewController: UIViewController {
     @IBAction func captureButton(_ sender: Any) {
         weak var weakSelf = self
         self.cameraViewController.captureImage(completionHander: {(imageFilePath: String?) -> Void in
+            
             let captureImageView = UIImageView(image: UIImage(contentsOfFile: imageFilePath!)!)
             captureImageView.backgroundColor = UIColor(white: 0.0, alpha: 0.7)
             captureImageView.frame = weakSelf!.view.bounds.offsetBy(dx: 0, dy: -weakSelf!.view.bounds.size.height)
@@ -108,16 +113,21 @@ class CameraScannerViewController: UIViewController {
         })
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addTakedPhotoSegue" {
+            self.cameraViewController.captureImage(completionHander: {(imageFilePath: String?) -> Void in
+                let capturedImage = UIImage(contentsOfFile: imageFilePath!)
+                let addPhotoVC = segue.destination as! AddPhotoViewController
+                addPhotoVC.photo = capturedImage
+            })
+        }
+    }
+    
     func dismissPreview(dismissTap: UITapGestureRecognizer) {
         UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 1.0, options: .allowUserInteraction, animations: {() -> Void in
             dismissTap.view?.frame = self.view.bounds.offsetBy(dx: 0, dy: self.view.bounds.size.height)}, completion: {(_ finished: Bool) -> Void in
                 dismissTap.view?.removeFromSuperview()
         })
     }
-    
-    
-    
-    
-    
     
 }
