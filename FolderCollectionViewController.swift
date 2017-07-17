@@ -10,22 +10,16 @@ import UIKit
 
 private let reuseIdentifier = "folderCell"
 
-struct FolderData {
-    var cellsArray: [CellData]
-    var name: String
-    
-    init(text: String, array: [CellData]) {
-        name = text
-        cellsArray = array
-    }
-}
-
 class FolderCollectionViewController: UICollectionViewController {
     
-    var folderArray : [FolderData] = [FolderData(text: "Folder", array: [CellData(text: "Name1",image: UIImage(named: "1")!),CellData(text: "Name2",image: UIImage(named: "2")!)])]
+    var folderArray : [FolderData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        folderArray = DatabaseModel.instance.data
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,15 +27,6 @@ class FolderCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -83,7 +68,11 @@ class FolderCollectionViewController: UICollectionViewController {
         if segue.identifier == "folder" && sender != nil {
             let index = sender as! Int
             
+        
             let destinationVC = segue.destination as! CollectionViewController
+            destinationVC.indexOfFolder = sender as! Int
+            
             destinationVC.cellDataArray = folderArray[index].cellsArray
         }
-    }}
+    }
+}
