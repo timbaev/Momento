@@ -21,6 +21,7 @@ class AddPhotoViewController: UIViewController {
         
         let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(savePhoto))
         self.navigationItem.rightBarButtonItem = saveButton
+        
         let touch  = UITapGestureRecognizer(target: self, action: #selector(self.endEditing))
         
         view.addGestureRecognizer(touch)

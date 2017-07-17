@@ -7,22 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		238CE93B1F1CD3DF00A0B696 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */; };
+		C315369F1F17FAF80008B854 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315369E1F17FAF80008B854 /* DetailViewController.swift */; };
+		C31B19091F18B317004BA3E6 /* FolderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */; };
+		C31B190B1F18B642004BA3E6 /* FolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */; };
+		C363C3981F17AFDF00671077 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363C3961F17AFDF00671077 /* CollectionViewCell.swift */; };
+		C363C3991F17AFDF00671077 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363C3971F17AFDF00671077 /* CollectionViewController.swift */; };
+		C375D6411F1CBF8000C62B01 /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375D6401F1CBF8000C62B01 /* DatabaseModel.swift */; };
+		C375D6431F1CE7A600C62B01 /* FolderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375D6421F1CE7A600C62B01 /* FolderData.swift */; };
+		C375D6451F1CE7D800C62B01 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375D6441F1CE7D800C62B01 /* CellData.swift */; };
 		CB121DB61F1ADA9400640512 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB121DB51F1ADA9400640512 /* Rectangle.swift */; };
 		CB121DB81F1AE3CE00640512 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB121DB71F1AE3CE00640512 /* Circle.swift */; };
 		CB1536441F18BA8200A527B4 /* IPDFCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1536431F18BA8200A527B4 /* IPDFCameraViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CB1536461F18C2DB00A527B4 /* CameraScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1536451F18C2DB00A527B4 /* CameraScannerViewController.swift */; };
 		CB1984CD1F1B68B2009F0E5F /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1984CC1F1B68B2009F0E5F /* Triangle.swift */; };
 		CB1984CF1F1B6FD0009F0E5F /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1984CE1F1B6FD0009F0E5F /* Figure.swift */; };
-		238CE93B1F1CD3DF00A0B696 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */; };
-		C315369F1F17FAF80008B854 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315369E1F17FAF80008B854 /* DetailViewController.swift */; };
-		C31B19091F18B317004BA3E6 /* FolderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */; };
-		C31B190B1F18B642004BA3E6 /* FolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */; };
-		C31B190C1F18E33E004BA3E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */; };
-		C363C3981F17AFDF00671077 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363C3961F17AFDF00671077 /* CollectionViewCell.swift */; };
-		C363C3991F17AFDF00671077 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363C3971F17AFDF00671077 /* CollectionViewController.swift */; };
-		C375D6411F1CBF8000C62B01 /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375D6401F1CBF8000C62B01 /* DatabaseModel.swift */; };
-		C375D6431F1CE7A600C62B01 /* FolderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375D6421F1CE7A600C62B01 /* FolderData.swift */; };
-		C375D6451F1CE7D800C62B01 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375D6441F1CE7D800C62B01 /* CellData.swift */; };
 		CB5501151F164C0F0029F486 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501141F164C0F0029F486 /* DrawView.swift */; };
 		CB5501171F164CFD0029F486 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501161F164CFD0029F486 /* DrawingViewController.swift */; };
 		CB5501191F16502A0029F486 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501181F16502A0029F486 /* Line.swift */; };
@@ -38,14 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB121DB51F1ADA9400640512 /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
-		CB121DB71F1AE3CE00640512 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
-		CB1536411F18BA8200A527B4 /* Momento-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Momento-Bridging-Header.h"; sourceTree = "<group>"; };
-		CB1536421F18BA8200A527B4 /* IPDFCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDFCameraViewController.h; sourceTree = "<group>"; };
-		CB1536431F18BA8200A527B4 /* IPDFCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDFCameraViewController.m; sourceTree = "<group>"; };
-		CB1536451F18C2DB00A527B4 /* CameraScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraScannerViewController.swift; sourceTree = "<group>"; };
-		CB1984CC1F1B68B2009F0E5F /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
-		CB1984CE1F1B6FD0009F0E5F /* Figure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
+		236BB3C01F1CF10F0096FC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Momento/AppDelegate.swift; sourceTree = "<group>"; };
 		238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		C315369E1F17FAF80008B854 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FolderCollectionViewController.swift; path = ../FolderCollectionViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +47,14 @@
 		C375D6401F1CBF8000C62B01 /* DatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
 		C375D6421F1CE7A600C62B01 /* FolderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FolderData.swift; path = ../FolderData.swift; sourceTree = "<group>"; };
 		C375D6441F1CE7D800C62B01 /* CellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
+		CB121DB51F1ADA9400640512 /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		CB121DB71F1AE3CE00640512 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		CB1536411F18BA8200A527B4 /* Momento-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Momento-Bridging-Header.h"; sourceTree = "<group>"; };
+		CB1536421F18BA8200A527B4 /* IPDFCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDFCameraViewController.h; sourceTree = "<group>"; };
+		CB1536431F18BA8200A527B4 /* IPDFCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDFCameraViewController.m; sourceTree = "<group>"; };
+		CB1536451F18C2DB00A527B4 /* CameraScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraScannerViewController.swift; sourceTree = "<group>"; };
+		CB1984CC1F1B68B2009F0E5F /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		CB1984CE1F1B6FD0009F0E5F /* Figure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
 		CB5501141F164C0F0029F486 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		CB5501161F164CFD0029F486 /* DrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		CB5501181F16502A0029F486 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -95,6 +95,7 @@
 		CB895CD71F154AF700E7A1E1 = {
 			isa = PBXGroup;
 			children = (
+				236BB3C01F1CF10F0096FC15 /* AppDelegate.swift */,
 				CB895CE21F154AF700E7A1E1 /* Momento */,
 				CB895CE11F154AF700E7A1E1 /* Products */,
 			);
@@ -112,14 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				CB1536401F18BA5600A527B4 /* CameraScanner */,
-				CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */,
-				CB895CE51F154AF700E7A1E1 /* ViewController.swift */,
 				C375D6421F1CE7A600C62B01 /* FolderData.swift */,
 				CB895CE71F154AF700E7A1E1 /* Main.storyboard */,
-				CB5501141F164C0F0029F486 /* DrawView.swift */,
-				CB5501161F164CFD0029F486 /* DrawingViewController.swift */,
-				CB5501181F16502A0029F486 /* Line.swift */,
-				CB76557B1F173C460054FE48 /* HSBColorPicker.swift */,
 				C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */,
 				C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */,
 				C315369E1F17FAF80008B854 /* DetailViewController.swift */,
@@ -181,8 +176,8 @@
 				TargetAttributes = {
 					CB895CDF1F154AF700E7A1E1 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0820;
 						DevelopmentTeam = U76UU38W98;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -223,13 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB895CE41F154AF700E7A1E1 /* AppDelegate.swift in Sources */,
 				CB1536441F18BA8200A527B4 /* IPDFCameraViewController.m in Sources */,
 				CB1536461F18C2DB00A527B4 /* CameraScannerViewController.swift in Sources */,
 				CB121DB61F1ADA9400640512 /* Rectangle.swift in Sources */,
-				C31B190C1F18E33E004BA3E6 /* AppDelegate.swift in Sources */,
 				C375D6411F1CBF8000C62B01 /* DatabaseModel.swift in Sources */,
 				C31B19091F18B317004BA3E6 /* FolderCollectionViewController.swift in Sources */,
-				231EC12B1F18F62200FA9526 /* ViewControllerTakePhoto.swift in Sources */,
 				C363C3991F17AFDF00671077 /* CollectionViewController.swift in Sources */,
 				238CE93B1F1CD3DF00A0B696 /* AddPhotoViewController.swift in Sources */,
 				CB895CE61F154AF700E7A1E1 /* ViewController.swift in Sources */,
@@ -244,7 +238,6 @@
 				CBF605C71F17D690001F8035 /* AnimationPopUp.swift in Sources */,
 				CB1984CF1F1B6FD0009F0E5F /* Figure.swift in Sources */,
 				CB76557E1F176C540054FE48 /* ColorPopoverViewController.swift in Sources */,
-				CB895CE41F154AF700E7A1E1 /* AppDelegate.swift in Sources */,
 				CB121DB81F1AE3CE00640512 /* Circle.swift in Sources */,
 				CB5501151F164C0F0029F486 /* DrawView.swift in Sources */,
 				CBF605C51F17CE49001F8035 /* PhotoPopoverViewController.swift in Sources */,
@@ -370,11 +363,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = U76UU38W98;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				DEVELOPMENT_TEAM = U76UU38W98;
 				INFOPLIST_FILE = Momento/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = itis.Momento;
@@ -390,11 +383,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = U76UU38W98;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				DEVELOPMENT_TEAM = U76UU38W98;
 				INFOPLIST_FILE = Momento/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = itis.Momento;
