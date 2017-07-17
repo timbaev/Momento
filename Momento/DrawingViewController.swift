@@ -36,6 +36,8 @@ class DrawingViewController: UIViewController {
         lineButton.layer.cornerRadius = 10
         lineButton.backgroundColor = UIColor.white
         pickedButton = lineButton
+        
+        //Comment to commit
     }
 
     override func didReceiveMemoryWarning() {
