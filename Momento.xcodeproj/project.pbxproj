@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		231EC12B1F18F62200FA9526 /* ViewControllerTakePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231EC12A1F18F62200FA9526 /* ViewControllerTakePhoto.swift */; };
+		238CE93B1F1CD3DF00A0B696 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */; };
 		C315369F1F17FAF80008B854 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315369E1F17FAF80008B854 /* DetailViewController.swift */; };
 		C31B19091F18B317004BA3E6 /* FolderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */; };
 		C31B190B1F18B642004BA3E6 /* FolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */; };
@@ -25,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		231EC12A1F18F62200FA9526 /* ViewControllerTakePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTakePhoto.swift; sourceTree = "<group>"; };
+		238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		C315369E1F17FAF80008B854 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FolderCollectionViewController.swift; path = ../FolderCollectionViewController.swift; sourceTree = "<group>"; };
 		C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FolderCollectionViewCell.swift; path = ../FolderCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -74,22 +74,22 @@
 		CB895CE21F154AF700E7A1E1 /* Momento */ = {
 			isa = PBXGroup;
 			children = (
-				231EC12A1F18F62200FA9526 /* ViewControllerTakePhoto.swift */,
+				CB895CE71F154AF700E7A1E1 /* Main.storyboard */,
+				CB5501141F164C0F0029F486 /* DrawView.swift */,
+				CB5501161F164CFD0029F486 /* DrawingViewController.swift */,
+				CB5501181F16502A0029F486 /* Line.swift */,
+				CB76557B1F173C460054FE48 /* HSBColorPicker.swift */,
 				C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */,
 				C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */,
 				C315369E1F17FAF80008B854 /* DetailViewController.swift */,
 				C363C3961F17AFDF00671077 /* CollectionViewCell.swift */,
 				C363C3971F17AFDF00671077 /* CollectionViewController.swift */,
-				CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */,
 				CB895CE51F154AF700E7A1E1 /* ViewController.swift */,
-				CB895CE71F154AF700E7A1E1 /* Main.storyboard */,
+				238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */,
 				CB895CEA1F154AF700E7A1E1 /* Assets.xcassets */,
+				CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */,
 				CB895CEC1F154AF700E7A1E1 /* LaunchScreen.storyboard */,
 				CB895CEF1F154AF700E7A1E1 /* Info.plist */,
-				CB5501141F164C0F0029F486 /* DrawView.swift */,
-				CB5501161F164CFD0029F486 /* DrawingViewController.swift */,
-				CB5501181F16502A0029F486 /* Line.swift */,
-				CB76557B1F173C460054FE48 /* HSBColorPicker.swift */,
 			);
 			path = Momento;
 			sourceTree = "<group>";
@@ -169,8 +169,8 @@
 			files = (
 				C31B190C1F18E33E004BA3E6 /* AppDelegate.swift in Sources */,
 				C31B19091F18B317004BA3E6 /* FolderCollectionViewController.swift in Sources */,
-				231EC12B1F18F62200FA9526 /* ViewControllerTakePhoto.swift in Sources */,
 				C363C3991F17AFDF00671077 /* CollectionViewController.swift in Sources */,
+				238CE93B1F1CD3DF00A0B696 /* AddPhotoViewController.swift in Sources */,
 				CB895CE61F154AF700E7A1E1 /* ViewController.swift in Sources */,
 				C31B190B1F18B642004BA3E6 /* FolderCollectionViewCell.swift in Sources */,
 				C315369F1F17FAF80008B854 /* DetailViewController.swift in Sources */,
