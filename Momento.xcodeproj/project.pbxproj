@@ -11,7 +11,6 @@
 		C315369F1F17FAF80008B854 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315369E1F17FAF80008B854 /* DetailViewController.swift */; };
 		C31B19091F18B317004BA3E6 /* FolderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */; };
 		C31B190B1F18B642004BA3E6 /* FolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */; };
-		C31B190C1F18E33E004BA3E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */; };
 		C34938351F1DFD5400FA1840 /* PickerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34938341F1DFD5400FA1840 /* PickerCollectionViewController.swift */; };
 		C34938371F1E040D00FA1840 /* PickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34938361F1E040D00FA1840 /* PickerCollectionViewCell.swift */; };
 		C34938391F1E0B1F00FA1840 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34938381F1E0B1F00FA1840 /* ToastMessage.swift */; };
@@ -102,10 +101,6 @@
 		CB1FCC151F1D28A5006A12DF /* Drawer */ = {
 			isa = PBXGroup;
 			children = (
-				CB5501141F164C0F0029F486 /* DrawView.swift */,
-				CB5501161F164CFD0029F486 /* DrawingViewController.swift */,
-				CB5501181F16502A0029F486 /* Line.swift */,
-				CB76557B1F173C460054FE48 /* HSBColorPicker.swift */,
 				CB76557D1F176C540054FE48 /* ColorPopoverViewController.swift */,
 				CBF605C41F17CE49001F8035 /* PhotoPopoverViewController.swift */,
 				CBF605C61F17D690001F8035 /* AnimationPopUp.swift */,
@@ -129,13 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				C375D6421F1CE7A600C62B01 /* FolderData.swift */,
-				C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */,
-				C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */,
-				C315369E1F17FAF80008B854 /* DetailViewController.swift */,
-				C363C3961F17AFDF00671077 /* CollectionViewCell.swift */,
-				C363C3971F17AFDF00671077 /* CollectionViewController.swift */,
-				C375D6401F1CBF8000C62B01 /* DatabaseModel.swift */,
-				C375D6441F1CE7D800C62B01 /* CellData.swift */,
 			);
 			name = Collections;
 			sourceTree = "<group>";
