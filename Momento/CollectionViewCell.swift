@@ -46,10 +46,6 @@ class CollectionViewCell: UICollectionViewCell {
     
     
     
-    
-    // https://www.youtube.com/watch?v=vv3vOUNUfMU
-    
-    
     func setupSubviews(){
         self.checkboxImageView = UIImageView()
         self.checkboxImageView!.translatesAutoresizingMaskIntoConstraints = false

@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "PickerCell"
 
-class PickerCollectionViewController: UICollectionViewController {
+class PickerCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var image: UIImage!
 
@@ -75,5 +75,36 @@ class PickerCollectionViewController: UICollectionViewController {
         rootVC.imageSavedMessage()
         _ = self.navigationController?.popToRootViewController(animated: true)
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let size = CGSize(width: 184, height: 184)
+        
+        switch UIDevice.current.type {
+        case .simulator:
+            return CGSize(width: 156, height: 156)
+        case .iPhone5:
+            return CGSize(width: 156, height: 156)
+        case .iPhone5S:
+            return CGSize(width: 156, height: 156)
+        case .iPhone6:
+            return size
+        case .iPhoneSE:
+            return CGSize(width: 156, height: 156)
+        case .iPhone6plus:
+            return size
+        case .iPhone7:
+            return size
+        case .iPhone7plus:
+            return size
+        default:
+            return size
+        }
+        
+        
+    }
+
 
 }
