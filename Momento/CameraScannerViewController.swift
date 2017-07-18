@@ -119,6 +119,7 @@ class CameraScannerViewController: UIViewController {
                 let capturedImage = UIImage(contentsOfFile: imageFilePath!)
                 let addPhotoVC = segue.destination as! AddPhotoViewController
                 addPhotoVC.photo = capturedImage
+                addPhotoVC.setScannedImage()
             })
         }
     }
