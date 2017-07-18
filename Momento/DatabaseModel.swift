@@ -10,12 +10,33 @@ import UIKit
 
 final class DatabaseModel {
     
-    var data: [FolderData]!
+    var data = [FolderData]()
+    private let folderNames = ["Пейзажи", "Семья", "Документы", "Эскизы", "Автографы", "Прочее"]
     
     static let instance = DatabaseModel()
     
     private init() {
-        data = [FolderData(text: "Пейзажи", array: [CellData(cellDescription: "Google",cellText: "Name1",cellImage: UIImage(named: "1")!),CellData(cellDescription: "Tabigat",cellText: "Name2",cellImage: UIImage(named: "2")!)]), FolderData(text: "Семья", array: []), FolderData(text: "Документы", array: []), FolderData(text: "Эскизы", array: []), FolderData(text: "Автографы", array: []), FolderData(text: "Прочее", array: [])]
-        
+        if UserDefaults.standard.object(forKey: "firstInit") == nil {
+            for folderName in folderNames {
+                data.append(FolderData(text: folderName, array: []))
+                saveData(array: [CellData](), folderName: folderName)
+            }
+            UserDefaults.standard.set(false, forKey: "firstInit")
+        } else {
+            for folderName in folderNames {
+                data.append(FolderData(text: folderName, array: getData(folderName: folderName)))
+            }
+        }
+    }
+    
+    func saveData(array: [CellData], folderName: String) {
+        let encoded = array.map { $0.encode() }
+        UserDefaults.standard.set(encoded, forKey: folderName)
+    }
+    
+    func getData(folderName: String) -> [CellData] {
+        let dataArray = UserDefaults.standard.object(forKey: folderName) as! [NSData]
+        let savedCellData = dataArray.map { CellData(data: $0)! }
+        return savedCellData
     }
 }

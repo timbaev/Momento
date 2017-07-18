@@ -61,18 +61,19 @@ class PickerCollectionViewController: UICollectionViewController {
         
         return folderCell
     }
-    //!!!
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         DatabaseModel.instance.data[indexPath.item].cellsArray.append(CellData(cellDescription: descriptionText, cellText: text, cellImage: image))
-
+        
+        let folder = DatabaseModel.instance.data[indexPath.item]
+        print("Test indexPath \(indexPath.item)")
+        //DatabaseModel.instance.convertAndSaveInDDPath(array: folder.cellsArray, folderName: folder.name)
+        DatabaseModel.instance.saveData(array: folder.cellsArray, folderName: folder.name)
+        
         let rootVC = self.navigationController?.viewControllers.first as! ViewController
         rootVC.imageSavedMessage()
         _ = self.navigationController?.popToRootViewController(animated: true)
     }
-    
-    
-   
 
 }
