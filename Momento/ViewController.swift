@@ -10,51 +10,16 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavigationControllerDelegate {
     
-    @IBOutlet weak var mainLabel: UILabel!
-    var firstLaunch = true
-    
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addParallax()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if (firstLaunch) {
-            mainLabel.center.y -= 200
-            mainLabel.alpha = 0
-            UIView.animate(withDuration: 2.0, delay: 0, options: .curveEaseOut, animations: {
-                self.mainLabel.center.y += 200
-                self.mainLabel.alpha = 1.0
-                self.view.layoutIfNeeded()
-            }, completion: nil)
-            firstLaunch = false
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated:true)
-    }
-    
-    func addParallax() {
-        let amount = 50
-        
-        let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
-        horizontal.minimumRelativeValue = -amount
-        horizontal.maximumRelativeValue = amount
-        
-        let vertical = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
-        vertical.minimumRelativeValue = -amount
-        vertical.maximumRelativeValue = amount
-        
-        let group = UIMotionEffectGroup()
-        group.motionEffects = [horizontal, vertical]
-        self.view.addMotionEffect(group)
     }
 
     func takePhoto() {
