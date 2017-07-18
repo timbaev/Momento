@@ -8,9 +8,13 @@
 
 import UIKit
 
-class AddPhotoViewController: UIViewController {
+class AddPhotoViewController: UIViewController, UITextViewDelegate {
+
+    @IBOutlet weak var edgingView: UIView!
+    @IBOutlet weak var imagePicked: UIImageView!
     
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var descriptionTextView: UITextView!
     var photo: UIImage!
     
     
@@ -20,18 +24,50 @@ class AddPhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         photoImageView.image = photo
         
         let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(savePhoto))
         self.navigationItem.rightBarButtonItem = saveButton
+        
         let touch  = UITapGestureRecognizer(target: self, action: #selector(self.endEditing))
         
         view.addGestureRecognizer(touch)
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddPhotoViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddPhotoViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-
+        
+        edgingView.layer.cornerRadius = 10
+        edgingView.backgroundColor = UIColor.white
+        
+        descriptionTextView.layer.borderWidth = 1
+        descriptionTextView.layer.borderColor = UIColor.black.cgColor
+        descriptionTextView.layer.cornerRadius = 10
+        descriptionTextView.delegate = self
+        descriptionTextView.text = "Описание"
+        descriptionTextView.textColor = UIColor.lightGray
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    func setScannedImage() {
+        photoImageView.image = photo
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Описание"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{

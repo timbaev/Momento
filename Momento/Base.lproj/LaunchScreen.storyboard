@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +21,49 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="ljR-A1-s0o">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Momento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KW7-6c-AJR">
+                                <rect key="frame" x="0.0" y="200" width="375" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save your moments easy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4of-J9-oQ4">
+                                <rect key="frame" x="6" y="607" width="369" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Zmd-NP-rfe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="KW7-6c-AJR" secondAttribute="trailing" constant="-16" id="ArD-qh-W1R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4of-J9-oQ4" secondAttribute="trailing" constant="-16" id="C6z-AA-Zvh"/>
+                            <constraint firstItem="4of-J9-oQ4" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-10" id="JYX-Td-LF1"/>
+                            <constraint firstItem="KW7-6c-AJR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-16" id="LM3-Om-Uvr"/>
+                            <constraint firstItem="KW7-6c-AJR" firstAttribute="leading" secondItem="ljR-A1-s0o" secondAttribute="leading" id="M3D-Hs-bFs"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="4of-J9-oQ4" secondAttribute="bottom" constant="32" id="Meh-kw-sld"/>
+                            <constraint firstItem="ljR-A1-s0o" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="PIY-6V-QCd"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ljR-A1-s0o" secondAttribute="bottom" id="dJ8-tD-Ohr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ljR-A1-s0o" secondAttribute="trailing" constant="-16" id="ifZ-pa-LoN"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="KW7-6c-AJR" secondAttribute="bottom" constant="395" id="tAg-IK-3gI"/>
+                            <constraint firstItem="KW7-6c-AJR" firstAttribute="trailing" secondItem="ljR-A1-s0o" secondAttribute="trailing" id="vTY-wX-Ugr"/>
+                            <constraint firstItem="ljR-A1-s0o" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-16" id="xVe-5x-JSv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch" width="1000" height="665"/>
+    </resources>
 </document>

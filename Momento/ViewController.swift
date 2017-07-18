@@ -9,17 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavigationControllerDelegate {
+    
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated:true)
     }
+
     func takePhoto() {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
@@ -77,6 +79,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
         self.present(alertController, animated: true, completion: nil)
     }
     @IBAction func onScanClick(_ sender: Any) {
+        
     }
 }
 
