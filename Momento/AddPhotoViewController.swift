@@ -9,11 +9,14 @@
 import UIKit
 
 class AddPhotoViewController: UIViewController {
-
-    @IBOutlet weak var imagePicked: UIImageView!
     
     @IBOutlet weak var photoImageView: UIImageView!
     var photo: UIImage!
+    
+    
+    @IBOutlet var caption: UITextField!
+    
+    @IBOutlet var descriptionSaving: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,24 +57,17 @@ class AddPhotoViewController: UIViewController {
     }
     
     @objc private func savePhoto() {
-        let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
-        let compressedJPGImage = UIImage(data: imageData!)
-        UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
-        let alert = UIAlertController(title: "Wow", message: "You have saved your photo", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.default,handler: nil))
-        self.present(alert, animated: true, completion: nil)
-
+        performSegue(withIdentifier: "pickCollectionSegue", sender: photo)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "pickCollectionSegue" && sender != nil) {
+            let pickerCollectionVC = segue.destination as! PickerCollectionViewController
+            pickerCollectionVC.image = sender as! UIImage
+            pickerCollectionVC.text = caption.text!
+            pickerCollectionVC.descriptionText = descriptionSaving.text
+        }
+        
     }
-    */
-
+    
 }

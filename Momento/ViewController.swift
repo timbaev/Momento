@@ -30,6 +30,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
         }
     }
     
+    func imageSavedMessage() {
+        self.showToast(message: "Сохранено успешно!")
+    }
+    
     func openLibrary() {
             if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             let imagePicker = UIImagePickerController()
