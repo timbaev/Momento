@@ -36,6 +36,7 @@ class DrawingViewController: UIViewController {
         lineButton.layer.cornerRadius = 10
         lineButton.backgroundColor = UIColor.white
         pickedButton = lineButton
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     @IBAction func clearTapped() {
