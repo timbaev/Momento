@@ -10,6 +10,7 @@ import UIKit
 
 class AddPhotoViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet weak var edgingView: UIView!
     @IBOutlet weak var imagePicked: UIImageView!
     
     @IBOutlet weak var photoImageView: UIImageView!
@@ -30,6 +31,9 @@ class AddPhotoViewController: UIViewController, UITextViewDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddPhotoViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddPhotoViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        edgingView.layer.cornerRadius = 10
+        edgingView.backgroundColor = UIColor.white
         
         descriptionTextView.layer.borderWidth = 1
         descriptionTextView.layer.borderColor = UIColor.black.cgColor
