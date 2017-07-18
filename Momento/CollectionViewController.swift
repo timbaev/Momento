@@ -85,6 +85,7 @@ class CollectionViewController:  UICollectionViewController{
         }
         
         self.cellDataArray = newCellDataArray
+        DatabaseModel.instance.data[indexOfFolder].cellsArray = newCellDataArray
         self.collectionView!.deleteItems(at: selectedIndexPaths as [IndexPath])
         hideBottomButton(hide: true)
         

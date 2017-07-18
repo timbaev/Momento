@@ -10,11 +10,17 @@ import UIKit
 
 class AddPhotoViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet weak var edgingView: UIView!
     @IBOutlet weak var imagePicked: UIImageView!
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
     var photo: UIImage!
+    
+    
+    @IBOutlet var caption: UITextField!
+    
+    @IBOutlet var descriptionSaving: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +36,9 @@ class AddPhotoViewController: UIViewController, UITextViewDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddPhotoViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddPhotoViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        edgingView.layer.cornerRadius = 10
+        edgingView.backgroundColor = UIColor.white
         
         descriptionTextView.layer.borderWidth = 1
         descriptionTextView.layer.borderColor = UIColor.black.cgColor
@@ -84,12 +93,17 @@ class AddPhotoViewController: UIViewController, UITextViewDelegate {
     }
     
     @objc private func savePhoto() {
-        let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
-        let compressedJPGImage = UIImage(data: imageData!)
-        UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
-        let alert = UIAlertController(title: "Wow", message: "You have saved your photo", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.default,handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        performSegue(withIdentifier: "pickCollectionSegue", sender: photo)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "pickCollectionSegue" && sender != nil) {
+            let pickerCollectionVC = segue.destination as! PickerCollectionViewController
+            pickerCollectionVC.image = sender as! UIImage
+            pickerCollectionVC.text = caption.text!
+            pickerCollectionVC.descriptionText = descriptionSaving.text
+        }
+        
+    }
+    
 }
