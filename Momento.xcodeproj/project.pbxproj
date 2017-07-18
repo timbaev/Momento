@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23763E311F1E174B001EF370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */; };
 		238CE93B1F1CD3DF00A0B696 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */; };
 		C315369F1F17FAF80008B854 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315369E1F17FAF80008B854 /* DetailViewController.swift */; };
 		C31B19091F18B317004BA3E6 /* FolderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */; };
 		C31B190B1F18B642004BA3E6 /* FolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */; };
-		C31B190C1F18E33E004BA3E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */; };
 		C34938351F1DFD5400FA1840 /* PickerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34938341F1DFD5400FA1840 /* PickerCollectionViewController.swift */; };
 		C34938371F1E040D00FA1840 /* PickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34938361F1E040D00FA1840 /* PickerCollectionViewCell.swift */; };
 		C34938391F1E0B1F00FA1840 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34938381F1E0B1F00FA1840 /* ToastMessage.swift */; };
@@ -31,7 +31,6 @@
 		CB5501191F16502A0029F486 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5501181F16502A0029F486 /* Line.swift */; };
 		CB76557C1F173C460054FE48 /* HSBColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB76557B1F173C460054FE48 /* HSBColorPicker.swift */; };
 		CB76557E1F176C540054FE48 /* ColorPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB76557D1F176C540054FE48 /* ColorPopoverViewController.swift */; };
-		CB895CE41F154AF700E7A1E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */; };
 		CB895CE61F154AF700E7A1E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB895CE51F154AF700E7A1E1 /* ViewController.swift */; };
 		CB895CE91F154AF700E7A1E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB895CE71F154AF700E7A1E1 /* Main.storyboard */; };
 		CB895CEB1F154AF700E7A1E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB895CEA1F154AF700E7A1E1 /* Assets.xcassets */; };
@@ -41,7 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		236BB3C01F1CF10F0096FC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Momento/AppDelegate.swift; sourceTree = "<group>"; };
 		238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		C315369E1F17FAF80008B854 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FolderCollectionViewController.swift; path = ../FolderCollectionViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +66,7 @@
 		CB76557B1F173C460054FE48 /* HSBColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBColorPicker.swift; sourceTree = "<group>"; };
 		CB76557D1F176C540054FE48 /* ColorPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPopoverViewController.swift; sourceTree = "<group>"; };
 		CB895CE01F154AF700E7A1E1 /* Momento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momento.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Momento/AppDelegate.swift; sourceTree = "<group>"; };
 		CB895CE51F154AF700E7A1E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB895CE81F154AF700E7A1E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB895CEA1F154AF700E7A1E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,10 +100,6 @@
 		CB1FCC151F1D28A5006A12DF /* Drawer */ = {
 			isa = PBXGroup;
 			children = (
-				CB5501141F164C0F0029F486 /* DrawView.swift */,
-				CB5501161F164CFD0029F486 /* DrawingViewController.swift */,
-				CB5501181F16502A0029F486 /* Line.swift */,
-				CB76557B1F173C460054FE48 /* HSBColorPicker.swift */,
 				CB76557D1F176C540054FE48 /* ColorPopoverViewController.swift */,
 				CBF605C41F17CE49001F8035 /* PhotoPopoverViewController.swift */,
 				CBF605C61F17D690001F8035 /* AnimationPopUp.swift */,
@@ -129,13 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				C375D6421F1CE7A600C62B01 /* FolderData.swift */,
-				C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */,
-				C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */,
-				C315369E1F17FAF80008B854 /* DetailViewController.swift */,
-				C363C3961F17AFDF00671077 /* CollectionViewCell.swift */,
-				C363C3971F17AFDF00671077 /* CollectionViewController.swift */,
-				C375D6401F1CBF8000C62B01 /* DatabaseModel.swift */,
-				C375D6441F1CE7D800C62B01 /* CellData.swift */,
 			);
 			name = Collections;
 			sourceTree = "<group>";
@@ -143,7 +130,7 @@
 		CB895CD71F154AF700E7A1E1 = {
 			isa = PBXGroup;
 			children = (
-				236BB3C01F1CF10F0096FC15 /* AppDelegate.swift */,
+				CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */,
 				CB895CE21F154AF700E7A1E1 /* Momento */,
 				CB895CE11F154AF700E7A1E1 /* Products */,
 			);
@@ -173,7 +160,6 @@
 				CB895CE51F154AF700E7A1E1 /* ViewController.swift */,
 				238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */,
 				CB895CEA1F154AF700E7A1E1 /* Assets.xcassets */,
-				CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */,
 				CB895CEC1F154AF700E7A1E1 /* LaunchScreen.storyboard */,
 				CB895CEF1F154AF700E7A1E1 /* Info.plist */,
 				CB5501141F164C0F0029F486 /* DrawView.swift */,
@@ -263,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB895CE41F154AF700E7A1E1 /* AppDelegate.swift in Sources */,
+				23763E311F1E174B001EF370 /* AppDelegate.swift in Sources */,
 				CB1536441F18BA8200A527B4 /* IPDFCameraViewController.m in Sources */,
 				CB1536461F18C2DB00A527B4 /* CameraScannerViewController.swift in Sources */,
 				CB121DB61F1ADA9400640512 /* Rectangle.swift in Sources */,
