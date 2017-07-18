@@ -8,15 +8,17 @@
 
 import UIKit
 
-class AddPhotoViewController: UIViewController {
+class AddPhotoViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var imagePicked: UIImageView!
     
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var descriptionTextView: UITextView!
     var photo: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         photoImageView.image = photo
         
         let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(savePhoto))
@@ -28,8 +30,35 @@ class AddPhotoViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddPhotoViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddPhotoViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-
+        
+        descriptionTextView.layer.borderWidth = 1
+        descriptionTextView.layer.borderColor = UIColor.black.cgColor
+        descriptionTextView.layer.cornerRadius = 10
+        descriptionTextView.delegate = self
+        descriptionTextView.text = "Описание"
+        descriptionTextView.textColor = UIColor.lightGray
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    func setScannedImage() {
+        photoImageView.image = photo
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Описание"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
@@ -61,18 +90,6 @@ class AddPhotoViewController: UIViewController {
         let alert = UIAlertController(title: "Wow", message: "You have saved your photo", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.default,handler: nil))
         self.present(alert, animated: true, completion: nil)
-
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -20,6 +20,8 @@ class FolderCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         folderArray = DatabaseModel.instance.data
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.setToolbarHidden(true, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
