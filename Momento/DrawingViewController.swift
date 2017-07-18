@@ -36,13 +36,7 @@ class DrawingViewController: UIViewController {
         lineButton.layer.cornerRadius = 10
         lineButton.backgroundColor = UIColor.white
         pickedButton = lineButton
-        
-        //Comment to commit
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     @IBAction func clearTapped() {
@@ -85,13 +79,15 @@ class DrawingViewController: UIViewController {
         popOverVC.didMove(toParentViewController: self)
     }
     
-    @IBAction func onSaveImageClick(_ sender: Any) {
-        let drawView = self.drawView as! UIView
-        UIGraphicsBeginImageContext(drawView.frame.size)
-        drawView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "saveDrawSegue") {
+            let drawView = self.drawView as! UIView
+            UIGraphicsBeginImageContext(drawView.frame.size)
+            drawView.layer.render(in: UIGraphicsGetCurrentContext()!)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            let addPhotoVC = segue.destination as! AddPhotoViewController
+            addPhotoVC.photo = image
+        }
     }
     
     //MARK: -

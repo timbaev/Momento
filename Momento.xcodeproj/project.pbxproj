@@ -92,6 +92,47 @@
 			name = CameraScanner;
 			sourceTree = "<group>";
 		};
+		CB1FCC151F1D28A5006A12DF /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				CB5501141F164C0F0029F486 /* DrawView.swift */,
+				CB5501161F164CFD0029F486 /* DrawingViewController.swift */,
+				CB5501181F16502A0029F486 /* Line.swift */,
+				CB76557B1F173C460054FE48 /* HSBColorPicker.swift */,
+				CB76557D1F176C540054FE48 /* ColorPopoverViewController.swift */,
+				CBF605C41F17CE49001F8035 /* PhotoPopoverViewController.swift */,
+				CBF605C61F17D690001F8035 /* AnimationPopUp.swift */,
+				CB121DB51F1ADA9400640512 /* Rectangle.swift */,
+				CB121DB71F1AE3CE00640512 /* Circle.swift */,
+				CB1984CC1F1B68B2009F0E5F /* Triangle.swift */,
+				CB1984CE1F1B6FD0009F0E5F /* Figure.swift */,
+			);
+			name = Drawer;
+			sourceTree = "<group>";
+		};
+		CB1FCC161F1D28F4006A12DF /* CameraScanner */ = {
+			isa = PBXGroup;
+			children = (
+				CB1536451F18C2DB00A527B4 /* CameraScannerViewController.swift */,
+			);
+			name = CameraScanner;
+			sourceTree = "<group>";
+		};
+		CB1FCC171F1D290C006A12DF /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				C375D6421F1CE7A600C62B01 /* FolderData.swift */,
+				C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */,
+				C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */,
+				C315369E1F17FAF80008B854 /* DetailViewController.swift */,
+				C363C3961F17AFDF00671077 /* CollectionViewCell.swift */,
+				C363C3971F17AFDF00671077 /* CollectionViewController.swift */,
+				C375D6401F1CBF8000C62B01 /* DatabaseModel.swift */,
+				C375D6441F1CE7D800C62B01 /* CellData.swift */,
+			);
+			name = Collections;
+			sourceTree = "<group>";
+		};
 		CB895CD71F154AF700E7A1E1 = {
 			isa = PBXGroup;
 			children = (
@@ -112,34 +153,17 @@
 		CB895CE21F154AF700E7A1E1 /* Momento */ = {
 			isa = PBXGroup;
 			children = (
+				CB1FCC171F1D290C006A12DF /* Collections */,
+				CB1FCC161F1D28F4006A12DF /* CameraScanner */,
+				CB1FCC151F1D28A5006A12DF /* Drawer */,
 				CB1536401F18BA5600A527B4 /* CameraScanner */,
-				C375D6421F1CE7A600C62B01 /* FolderData.swift */,
 				CB895CE71F154AF700E7A1E1 /* Main.storyboard */,
-				C31B190A1F18B642004BA3E6 /* FolderCollectionViewCell.swift */,
-				C31B19081F18B317004BA3E6 /* FolderCollectionViewController.swift */,
-				C315369E1F17FAF80008B854 /* DetailViewController.swift */,
-				C363C3961F17AFDF00671077 /* CollectionViewCell.swift */,
-				C363C3971F17AFDF00671077 /* CollectionViewController.swift */,
 				CB895CE51F154AF700E7A1E1 /* ViewController.swift */,
 				238CE93A1F1CD3DF00A0B696 /* AddPhotoViewController.swift */,
 				CB895CEA1F154AF700E7A1E1 /* Assets.xcassets */,
 				CB895CE31F154AF700E7A1E1 /* AppDelegate.swift */,
 				CB895CEC1F154AF700E7A1E1 /* LaunchScreen.storyboard */,
 				CB895CEF1F154AF700E7A1E1 /* Info.plist */,
-				CB5501141F164C0F0029F486 /* DrawView.swift */,
-				CB5501161F164CFD0029F486 /* DrawingViewController.swift */,
-				CB1536451F18C2DB00A527B4 /* CameraScannerViewController.swift */,
-				CB5501181F16502A0029F486 /* Line.swift */,
-				CB76557B1F173C460054FE48 /* HSBColorPicker.swift */,
-				CB76557D1F176C540054FE48 /* ColorPopoverViewController.swift */,
-				CBF605C41F17CE49001F8035 /* PhotoPopoverViewController.swift */,
-				CBF605C61F17D690001F8035 /* AnimationPopUp.swift */,
-				CB121DB51F1ADA9400640512 /* Rectangle.swift */,
-				CB121DB71F1AE3CE00640512 /* Circle.swift */,
-				CB1984CC1F1B68B2009F0E5F /* Triangle.swift */,
-				CB1984CE1F1B6FD0009F0E5F /* Figure.swift */,
-				C375D6401F1CBF8000C62B01 /* DatabaseModel.swift */,
-				C375D6441F1CE7D800C62B01 /* CellData.swift */,
 			);
 			path = Momento;
 			sourceTree = "<group>";
@@ -176,7 +200,7 @@
 				TargetAttributes = {
 					CB895CDF1F154AF700E7A1E1 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = U76UU38W98;
+						DevelopmentTeam = W56K4E4L5F;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -363,14 +387,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = U76UU38W98;
+				DEVELOPMENT_TEAM = W56K4E4L5F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Momento/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = itis.Momento;
+				PRODUCT_BUNDLE_IDENTIFIER = itis.Momento.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momento/Momento-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -383,14 +407,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = U76UU38W98;
+				DEVELOPMENT_TEAM = W56K4E4L5F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Momento/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = itis.Momento;
+				PRODUCT_BUNDLE_IDENTIFIER = itis.Momento.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momento/Momento-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
