@@ -15,6 +15,7 @@ final class DatabaseModel {
     static let instance = DatabaseModel()
     
     private init() {
-        data = [FolderData(text: "Folder", array: [CellData(cellDescription: "Google",cellText: "Name1",cellImage: UIImage(named: "1")!),CellData(cellDescription: "Tabigat",cellText: "Name2",cellImage: UIImage(named: "2")!)])]
+        data = [FolderData(text: "Пейзажи", array: [CellData(cellDescription: "Google",cellText: "Name1",cellImage: UIImage(named: "1")!),CellData(cellDescription: "Tabigat",cellText: "Name2",cellImage: UIImage(named: "2")!)]), FolderData(text: "Семья", array: []), FolderData(text: "Документы", array: []), FolderData(text: "Эскизы", array: []), FolderData(text: "Автографы", array: []), FolderData(text: "Прочее", array: [])]
+        
     }
 }

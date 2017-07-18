@@ -17,6 +17,11 @@ class AddPhotoViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var descriptionTextView: UITextView!
     var photo: UIImage!
     
+    
+    @IBOutlet var caption: UITextField!
+    
+    @IBOutlet var descriptionSaving: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -88,12 +93,17 @@ class AddPhotoViewController: UIViewController, UITextViewDelegate {
     }
     
     @objc private func savePhoto() {
-        let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
-        let compressedJPGImage = UIImage(data: imageData!)
-        UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
-        let alert = UIAlertController(title: "Wow", message: "You have saved your photo", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.default,handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        performSegue(withIdentifier: "pickCollectionSegue", sender: photo)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "pickCollectionSegue" && sender != nil) {
+            let pickerCollectionVC = segue.destination as! PickerCollectionViewController
+            pickerCollectionVC.image = sender as! UIImage
+            pickerCollectionVC.text = caption.text!
+            pickerCollectionVC.descriptionText = descriptionSaving.text
+        }
+        
+    }
+    
 }
